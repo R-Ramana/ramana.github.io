@@ -242,6 +242,7 @@ nav li:hover {
     font-size: 13rem;
     font-family: 'Syncopate', sans-serif;
     background: #ababab no-repeat;
+    color: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
@@ -249,6 +250,15 @@ nav li:hover {
     font-weight: 100;
     cursor: context-menu;
     text-transform: uppercase;
+    transition: 500ms ease-in-out;
+}
+
+.name h1:hover {
+  transition: 300ms ease-in-out;
+  background: #f39c12;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: .7;
 }
 
 .name h1::before {
@@ -266,6 +276,11 @@ nav li:hover {
   height: 5px;
   border-radius: 0.8rem;
   opacity: 0.6;
+}
+
+.name h1:hover::before {
+  background-color: #ababab;
+  transition: .7s ease-out;
 }
 
 .name h6 {
