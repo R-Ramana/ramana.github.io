@@ -75,7 +75,9 @@ img {
 
 .heading h1 {
   font-size: 3.5rem;
-  color: rgba(255, 255, 255, 0.3);
+  /* color: rgba(255, 255, 255, 1); */
+  color: grey;
+  opacity: 0.7;
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
@@ -88,7 +90,8 @@ img {
   bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f39c12;
+  background-color: #FDC830;
+;
   opacity: 0.7;
 }
 
@@ -118,6 +121,11 @@ img {
   border-radius: 0.8rem;
   background-color: #202020;
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 1);
+}
+
+::selection {
+  background: #FDC830;
+  color: black;
 }
 
 /* LANDING PAGE STYLE */
@@ -308,8 +316,9 @@ nav li:hover {
 
 .header h1 {
   font-size: 10rem;
-  opacity: 0.3;
+  /* opacity: 0.3; */
   text-align: center;
+  color: #f39c12;
 }
 
 .aboutme .body_text {
@@ -317,7 +326,7 @@ nav li:hover {
 }
 
 .aboutme span {
-  color: #F37335;
+  color: #f39c12;
   font-weight: 700;
   font-size: 2rem;
 }
@@ -421,119 +430,6 @@ button:hover::before {
   }
 }
 
-/* SKILLS */
-/* .skills-container {
-  color: #f39c12;
-  list-style: none;
-}
-
-.skills h2 {
-  margin-bottom: 1.5rem;
-  opacity: 0.5;
-}
-
-.skills li {
-  margin: 2.5rem 0;
-}
-
-.bar {
-  background: #353b48;
-  display: block;
-  height: 0.5rem;
-  border-radius: 0.7rem;
-  overflow: hidden;
-  box-shadow: 0 0 0.8rem #f39c12b3;
-}
-
-.bar span {
-  height: 0.5rem;
-  float: left;
-  background: linear-gradient(to right, #FDC830, #F37335);
-}
-
-li .value {
-  float: right;
-}
-
-li h2 span {
-  float: right;
-}
-
-.html {
-  width: 65%;
-  animation: html 4s;
-}
-
-.c {
-  width: 70%;
-  animation: c 4s;
-}
-
-.verilog {
-  width: 70%;
-  animation: verilog 4s;
-}
-
-.git {
-  width: 75%;
-  animation: git 5s;
-}
-
-.android {
-  width: 65%;
-  animation: android 5s;
-}
-
-@keyframes html {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 65%;
-  }
-}
-
-@keyframes c {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes verilog {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes git {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 75%;
-  }
-}
-
-@keyframes android {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 65%;
-  }
-} */
-
 /* PROJECTS */
 .projectdetails {
   display: flex;
@@ -555,13 +451,15 @@ li h2 span {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 300;
-  opacity: 0.3;
+  color: grey;
+  opacity: 0.7;
 }
 
-.projectdescription h1 {
+.projectdescription h1 a {
   font-size: 3.5rem;
   font-weight: 300;
   margin: 1rem 0;
+  color: #f39c12;
 }
 
 .projectdescription .details {
@@ -569,21 +467,28 @@ li h2 span {
   margin-top: 2.5rem;
   font-size: 2rem;
   text-transform: uppercase;
-  color: #f5efef;
+  color: #f39c12;
   transition: color 650ms;
 }
 
 .projectdescription .details:hover {
-  color: #f39c12;
+  color: #FDC830;
+  cursor: pointer;
   animation: rubberBand 1s;
+}
+
+.projectdescription h1 a:hover {
+  color: #FDC830;
+  cursor: pointer;
 }
 
 /* EXPERIENCE PAGE */
 .timeline ul {
-  border-left: 4px solid #f39c12;
+  border-left: 4px solid rgba(243, 156, 18, 0.4);
+  border-bottom: 4px solid rgba(243, 156, 18, 0.2);
   border-radius: 0.8rem;
   background-color: rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   padding: 5rem;
   list-style: none;
@@ -596,7 +501,8 @@ li h2 span {
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 1rem;
-  opacity: 0.3;
+  /* opacity: 0.7; */
+  color: #f39c12;
 }
 
 .timeline .period {
@@ -617,7 +523,7 @@ li h2 span {
   position: absolute;
   display: block;
   top: 50%;
-  transform: translateY(50%);
+  transform: translateY(-50%);
 }
 
 .timeline .period::before {
@@ -636,6 +542,10 @@ li h2 span {
   height: 1.5rem;
   width: 1.5rem;
   background-color: #f39c12;
+}
+
+.timeline .period .date {
+  text-align: center;
 }
 
 /* CONTACT STYLE */
@@ -821,16 +731,22 @@ input[type="submit"]:hover {
     font-size: 1.3rem;
   }
 
+  .timeline .period h1,
+  .timeline .period p {
+    font-size: 1.5rem;
+  }
+
   .timeline ul {
-    margin: 0 0 0 auto;
+    margin: auto;
+    padding: 2rem;
   }
 
   .timeline .period::before {
-    left: -20rem;
+    left: -17rem;
   }
 
   .timeline .period::after {
-    left: -5.9rem;
+    left: -3rem;
   }
 }
 /* MOBILE */
@@ -909,6 +825,7 @@ input[type="submit"]:hover {
 
   .timeline ul {
     font-size: 1.6rem;
+    margin: auto;
   }
 
   .timeline .period::before {
