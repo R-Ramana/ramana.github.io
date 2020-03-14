@@ -12,8 +12,13 @@
   </head>
 
   <body>
+    <!-- LOADING PAGE -->
+    <div class="loader-wrapper">
+      <span class="loader"></span></span>
+    </div>
+
+    <!-- NAV BAR -->
     <header>
-<!-- NAV BAR -->
       <div class="menu">
         <div class="line half start"></div>
         <div class="line"></div>
@@ -25,15 +30,15 @@
           <li><a href="index.html" class="link">Home</a></li>
           <li><a href="#about" class="link">About Me</a></li>
           <li><a href="#projects" class="link">Projects</a></li>
-          <!-- <li><a href="#experience" class="link">Experience</a></li> -->
+          <li><a href="#experience" class="link">Experience</a></li>
           <li><a href="#contactform" class="link">Contact</a></li>
         </ul>
       </nav>
 
 <!-- LANDING PAGE CONTENT -->
       <div class="name">
-        <h1>R Ramana</h1>
-        <h6>Computer Engineer</h6>
+        <h1 id="name" class="animateName">R Ramana</h1>
+        <h6 id="sub" class="animateSub">Computer Engineer</h6>
       </div>
     </header>
 
@@ -41,42 +46,58 @@
     <section class="about" id="about">
       <div class="container">
         <div class="img" data-aos="fade-right" data-aos-delay="100">
-          <img src="resources/images/profileimg.jpg" alt="Ramana">
+          <img src="resources/images/profileimg.jpg" style="border-radius: 5rem; opacity: .6;" alt="Ramana">
         </div>
         <div class="aboutme" data-aos="fade-left" data-aos-delay="200">
-          <div class="header">
-            <h1>ABOUT</h1>
-          </div>
-          <h1 class="body_text">I am a first year Computer Engineer student at the National University of Singapore. I am also part of the University Scholars Programme (USP),
-            which is a multi-disciplinary programme aiming to build critical thinking capabilities. I take immense pleasure from attempting and solving complex problems.
-            I am interested in Artificial Intelligence, Medical Technology and Green Technology.
-          <br>
-          <br>
-          <br>
-          <span><b>HOW I CAN HELP YOU</b></span>
-          <br>
-          <br>
-          If you are looking for an adaptable team player, who loves to constantly challenge himself then look no further. I have most knowledge and experience with C, C++ and Verilog.
-          Hence naturally I am most comfortable in these languages. However, I also have some experience in Java, as well as Python. As a lifelong learner and someone with a huge appetite for knowledge,
-          I can pick up any other languages or skills necessary to stay competent and relevant. More importantly, I look forward to working with you and being a valuable member of your team.</h1>
-
-          <!-- BUTTONS -->
-          <div class="buttons">
-            <div class="button">
-              <button type="button"><a href="resources/documents/Ramana_CV.pdf" target="_blank">Curriculum<br>Vitae</a></button>
-              <button type="button"><a href="resources/documents/Ramana_PS.pdf" target="_blank">Personal<br>Statement</a></button>
+            <div class="header">
+                <h1>ABOUT</h1>
             </div>
-          </div>
 
-          <!-- SOCIAL MEDIA ICONS -->
-          <div class="socialmedia">
-            <ul class="list">
-              <li><a href="https://www.linkedin.com/in/ramana-r" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/R-Ramana" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-github-square"></i></a></li>
-            </ul>
-          </div>
+            <h1 class="subheader"><b>INTERESTS</b></span></h1>
+            <div class="skillsets">
+                <ul class="list">
+                    <li><a class="skillicons"><i class="fas fa-laptop-medical"><p class="caption">MED TECH</p></i></a></li>
+                    <li><a class="skillicons"><i class="fas fa-robot"><p class="caption">AI</p></i></a></li>
+                    <li><a class="skillicons"><i class="fas fa-globe-asia"><p class="caption">GREEN TECH</p></i></a></li>
+                </ul>
+
+            </div>
+            <!--<h1 class="body_text">I am a Computer Engineer undergraduate student at the National University of Singapore. I am also part of the University Scholars Programme (USP),
+    which is a multi-disciplinary programme aiming to build critical thinking capabilities. I take immense pleasure from attempting and solving complex problems.
+    I am interested in <span>Artificial Intelligence</span>, <span>Medical Technology</span> and <span>Green Technology</span>.</h1>-->
+            <br>
+            <br>
+            <br>
+            <h1 class="subheader"><b>HOW I CAN HELP</b></span></h1>
+
+            <!-- SKILLSETS -->
+            <div class="skillsets">
+                <ul class="list">
+                    <li><a class="skillicons"><i class="fab fa-html5"><p class="caption">HTML</p></i></a></li>
+
+                    <li><a class="skillicons"><i class="fab fa-css3-alt"><p class="caption">CSS</p></i></a></li>
+                    <li><a class="skillicons"><i class="fas fa-code"><p class="caption">C, C++</p></i></a></li>
+                    <li><a class="skillicons"><i class="fas fa-microchip"><p class="caption">Verilog</p></i></a></li>
+                </ul>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+                <div class="button">
+                    <button type="button"><a href="resources/documents/Ramana_CV.pdf" target="_blank">Curriculum<br>Vitae</a></button>
+                </div>
+            </div>
+
+            <!-- SOCIAL MEDIA ICONS -->
+            <div class="socialmedia">
+                <ul class="list">
+                    <li><a href="https://www.linkedin.com/in/ramana-r" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/R-Ramana" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-github-square"></i></a></li>
+                </ul>
+            </div>
+
         </div>
-
       </div>
     </section>
 
@@ -89,29 +110,29 @@
 
         <div class="projectdetails">
           <div class="projectimg rightside" data-aos="fade-right" data-aos-delay="100">
-            <a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" target="_blank"><img src="resources/images/mBot.jpg" alt="Overview of mBot"></a>
+            <a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener"  target="_blank"><img src="resources/images/mBot.jpg" alt="Overview of mBot"></a>
           </div>
           <div class="projectdescription" data-aos="fade-left" data-aos-delay="150">
             <h6>C++</h6>
-            <h1><a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" target="_blank">A-Maze-ing Race mBot</a></h1>
+            <h1><a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener" target="_blank">A-Maze-ing Race mBot</a></h1>
             <p>A robot that was calibrated to traverse a maze by responding to colour and frequency cues. Created using mBot (Arduino platform).</p>
-            <a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" target="_blank" class="details">View Details</a>
+            <a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener" target="_blank" class="details">View Details</a>
           </div>
         </div>
 
-        <!-- <div class="projectdetails">
+         <div class="projectdetails">
         <div class="projectdescription rightside" data-aos="fade-right" data-aos-delay="300">
-          <h6>Type of Project/Langauge Used</h6>
-          <h1>Name of Project</h1>
-          <p>Project Description Goes here</p>
+          <h6>HTML, CSS, Bootstrap</h6>
+          <h1><a>Web Development</a></h1>
+          <p>Web Development project for Success Steel Engineering Pte Ltd. Webpage built using Bootstrap framework, HTML and CSS.</p>
           <a href="#" class="details">View Details</a>
         </div>
           <div class="projectimg" data-aos="fade-left" data-aos-delay="400">
-            <img src="resources/images/" alt="">
+            <img src="resources/images/success-steel.png" alt="Preview of http://www.success-steel.com.sg/">
           </div>
         </div>
 
-        <div class="projectdetails">
+  <!--      <div class="projectdetails">
           <div class="projectimg rightside" data-aos="fade-right" data-aos-delay="500">
             <img src="resources/images/" alt="">
           </div>
@@ -127,7 +148,7 @@
     </section>
 
 <!-- WORK EXPERIENCE PAGE -->
-    <!-- <section class="experience" id="experience">
+    <section class="experience" id="experience">
       <div class="container">
         <div class="heading">
           <h1>Experience</h1>
@@ -139,7 +160,7 @@
               <p>Internship details blah blah blah</p>
               <br><br>
               <p class="date">May 2020 - Present</p>
-            </li> -->
+            </li>
 
         <!--    <li class="period">
               <h1>Singapore Airlines Engineering Company</h1>
@@ -174,7 +195,7 @@
           <label for="message">Message:</label>
           <textarea id="message" name="message" cols="10" rows="10"></textarea>
           <input type="text" name="_gotcha" style="display:none" />
-          <!-- FOR DROPDOWN MENUS
+          <!-- FOR DROPDOWN MENUS IF I WANT ONE
           <label for="dropdown">Select one:</label>
           <select name="dropdown" id="dropdown">
             <option value="">Option 1</option>

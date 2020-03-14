@@ -75,9 +75,7 @@ img {
 
 .heading h1 {
   font-size: 3.5rem;
-  /* color: rgba(255, 255, 255, 1); */
-  color: grey;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
@@ -90,9 +88,7 @@ img {
   bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #FDC830;
-;
-  opacity: 0.7;
+  background-color: #f39c12;
 }
 
 .heading h1::before {
@@ -126,6 +122,51 @@ img {
 ::selection {
   background: #FDC830;
   color: black;
+}
+
+/* LOADING PAGE */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #F37335;
+  animation: loader 2s infinite ease;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* LANDING PAGE STYLE */
@@ -247,18 +288,18 @@ nav li:hover {
 }
 
 .name h1 {
-    font-size: 13rem;
-    font-family: 'Syncopate', sans-serif;
-    background: #ababab no-repeat;
-    color: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 1rem;
-    user-select: none;
-    font-weight: 100;
-    cursor: context-menu;
-    text-transform: uppercase;
-    transition: 500ms ease-in-out;
+  font-size: 13rem;
+  font-family: 'Syncopate', sans-serif;
+  background: #ababab no-repeat;
+  color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  user-select: none;
+  font-weight: 100;
+  cursor: context-menu;
+  text-transform: uppercase;
+  transition: 500ms ease-in-out;
 }
 
 .name h1:hover {
@@ -277,9 +318,6 @@ nav li:hover {
   transform: translateX(-50%);
   background-color: #f39c12;
   opacity: 0.7;
-}
-
-.name h1::before {
   width: 30rem;
   height: 5px;
   border-radius: 0.8rem;
@@ -291,6 +329,12 @@ nav li:hover {
   transition: .7s ease-out;
 }
 
+.name .animateName {
+  animation: appear 3s;
+  animation-delay: .7s;
+  animation-fill-mode: backwards;
+}
+
 .name h6 {
   font-size: 2rem;
   font-weight: 800;
@@ -298,6 +342,33 @@ nav li:hover {
   background: radial-gradient(circle farthest-corner at center center, #cccccc, #333333) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.name .animateSub {
+  animation: toLeft 2.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* ABOUT PAGE STYLE */
@@ -316,7 +387,6 @@ nav li:hover {
 
 .header h1 {
   font-size: 10rem;
-  /* opacity: 0.3; */
   text-align: center;
   color: #f39c12;
 }
@@ -328,7 +398,14 @@ nav li:hover {
 .aboutme span {
   color: #f39c12;
   font-weight: 700;
+}
+
+.aboutme .subheader {
+  color: #f39c12;
+  font-weight: 700;
   font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .about .container .img {
@@ -340,6 +417,11 @@ nav li:hover {
 
 .aboutme {
   flex: 1;
+}
+
+.skillsets .list {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .buttons {
@@ -386,6 +468,21 @@ button:hover::before {
   width: 120%;
 }
 
+.skillsets {
+  margin-top: 3rem;
+}
+
+.skillsets i {
+  font-size: 4rem;
+  transition: color 650ms;
+  text-align: center;
+}
+
+.skillsets .caption {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
 .socialmedia {
   margin-top: 5rem;
 }
@@ -395,7 +492,8 @@ button:hover::before {
   transition: color 650ms;
 }
 
-.socialmedia i:hover {
+.socialmedia i:hover,
+.skillsets i:hover {
   color: #ffbb4f;
   animation: rubberBand 1s;
 }
@@ -451,8 +549,7 @@ button:hover::before {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 300;
-  color: grey;
-  opacity: 0.7;
+  color: white;
 }
 
 .projectdescription h1 a {
