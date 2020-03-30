@@ -124,6 +124,11 @@ img {
   color: black;
 }
 
+.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
 /* LOADING PAGE */
 .loader-wrapper {
   width: 100%;
@@ -169,7 +174,6 @@ img {
   }
 }
 
-/* LANDING PAGE STYLE */
 /* NAV BAR */
 header {
   width: 100%;

@@ -2,9 +2,10 @@ $(document).ready(function () {
 
   // LOADING PAGE
   $(window).on("load", function(){
-    $(".loader-wrapper").fadeOut("slow");
+    $(".loader-wrapper").fadeOut("fast");
     $("#name").addClass("animateName");
     $("#sub").addClass("animateSub");
+    $('body').removeClass('loading');
   });
 
   // NAVBAR TOGGLE OPEN AND CLOSE
