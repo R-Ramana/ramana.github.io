@@ -19,7 +19,7 @@ $(document).ready(function () {
     $('.navbar').removeClass('open');
   });
 
-// SMOOTH SCROLL EFFECT
+// SMOOTH SCROLL EFFECT FOR NAV BAR SCROLL
   const scroll = new SmoothScroll('.navbar a[href*="#"]', {
     speed: 1500
   });
