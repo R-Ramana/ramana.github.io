@@ -1226,7 +1226,7 @@ input[type="submit"]:hover {
   transform: translate(-100%);
 }
 
-#css3 {
+#css {
   margin: 0;
   position: absolute;
   top: 65%;
@@ -1236,7 +1236,7 @@ input[type="submit"]:hover {
   transform-origin: center center;
 }
 
-#html5 {
+#html {
   margin: 0;
   position: absolute;
   top: 37%;
@@ -1245,7 +1245,7 @@ input[type="submit"]:hover {
   transform: translate(-50%, -50%);
 }
 
-#sass {
+#cplus {
   margin: 0;
   position: absolute;
   top: 30%;
@@ -1254,7 +1254,7 @@ input[type="submit"]:hover {
   transform: translate(-50%, -50%);
 }
 
-#js {
+#hdl {
   margin: 0;
   position: absolute;
   top: 37%;
@@ -1263,7 +1263,7 @@ input[type="submit"]:hover {
   transform: translate(-50%, -50%);
 }
 
-#php {
+#python {
   margin: 0 auto;
   position: absolute;
   top: 65%;
@@ -1272,7 +1272,7 @@ input[type="submit"]:hover {
   transform: translate(-50%, -50%);
 }
 
-#sanky {
+#compass {
   margin: 0;
   position: absolute;
   top: 60%;
@@ -1283,7 +1283,7 @@ input[type="submit"]:hover {
   z-index: -5;
 }
 
-#retina {
+#needle {
   width: 50%;
   margin: 0;
   position: absolute;

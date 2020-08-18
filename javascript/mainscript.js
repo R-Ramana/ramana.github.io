@@ -4,43 +4,43 @@ tl.staggerFrom(".topics", 3, {
 }, 0.3);
 
 
-var js = document.getElementById("js");
-var sass = document.getElementById("sass");
-var php = document.getElementById("php");
-var css3 = document.getElementById("css3");
-var hmtl5 = document.getElementById("html5");
-var topics = document.getElementsByClassName("topics");
+var hdl = document.getElementById("hdl");
+var cplus = document.getElementById("cplus");
+var python = document.getElementById("python");
+var css = document.getElementById("css");
+var hmtl = document.getElementById("html");
+var skill = document.getElementsByClassName("skill");
 
 
-js.addEventListener("mouseover",jsretina,false);
-js.addEventListener("touchstart",jsretina,false);
-html5.addEventListener("mouseover",html5retina,false);
-html5.addEventListener("touchstart",html5retina,false);
-sass.addEventListener("mouseover",sassretina,false);
-sass.addEventListener("touchstart",sassretina,false);
-php.addEventListener("mouseover",phpretina,false);
-php.addEventListener("touchstart",phpretina,false);
-css3.addEventListener("mouseover",css3retina,false);
-css3.addEventListener("touchstart",css3retina,false);
+hdl.addEventListener("mouseover",hdlneedle,false);
+hdl.addEventListener("touchstart",hdlneedle,false);
+html.addEventListener("mouseover",htmlneedle,false);
+html.addEventListener("touchstart",htmlneedle,false);
+cplus.addEventListener("mouseover",cplusneedle,false);
+cplus.addEventListener("touchstart",cplusneedle,false);
+python.addEventListener("mouseover",pythonneedle,false);
+python.addEventListener("touchstart",pythonneedle,false);
+css.addEventListener("mouseover",cssneedle,false);
+css.addEventListener("touchstart",cssneedle,false);
 
-function jsretina(event) {
-	TweenLite.to("#retina", 1, {rotation:-135});
+function hdlneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:-135});
 }
 
-function html5retina(event) {
-	TweenLite.to("#retina", 1, {rotation:135});
+function htmlneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:135});
 }
 
-function css3retina(event) {
-	TweenLite.to("#retina", 1, {rotation:70});
+function cssneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:70});
 }
 
-function phpretina(event) {
-	TweenLite.to("#retina", 1, {rotation:-70});
+function pythonneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:-70});
 }
 
-function sassretina(event) {
-	TweenLite.to("#retina", 1, {rotation:180});
+function cplusneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:180});
 }
 
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
   // TIMELINE
   // License: https://codyhouse.co/mit
   var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 60;
+		eventsMinDistance = 80;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
