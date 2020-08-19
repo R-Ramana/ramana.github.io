@@ -1050,6 +1050,9 @@ input[type="submit"]:hover {
   .about .container {
     flex-direction: column;
   }
+  .link {
+      font-size: 2.8rem;
+  }
 }
 
 /* TABLET */
@@ -1064,15 +1067,16 @@ input[type="submit"]:hover {
     .name h1::before {
         height: 3px;
     }
+
     .list i {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0 2rem;
     }
     li {
         margin: 2rem 0;
     }
     .link {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .header {
         margin-bottom: 3rem;
@@ -1143,6 +1147,7 @@ input[type="submit"]:hover {
     }
 }
 
+/* X-SMALL SCREENS */
 
 /* MOBILE */
 
@@ -1161,8 +1166,12 @@ input[type="submit"]:hover {
         height: 3px;
         top: 5.5rem;
     }
+    .list i {
+        /* font-size: 2rem; */
+        padding: 0 2rem;
+    }
     .link {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
     }
     .about .container {
         flex-direction: column;
