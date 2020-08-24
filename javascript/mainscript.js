@@ -9,6 +9,7 @@ var cplus = document.getElementById("cplus");
 var python = document.getElementById("python");
 var css = document.getElementById("css");
 var hmtl = document.getElementById("html");
+var java = document.getElementById("java");
 var skill = document.getElementsByClassName("skill");
 
 
@@ -22,9 +23,11 @@ python.addEventListener("mouseover",pythonneedle,false);
 python.addEventListener("touchstart",pythonneedle,false);
 css.addEventListener("mouseover",cssneedle,false);
 css.addEventListener("touchstart",cssneedle,false);
+java.addEventListener("mouseover",javaneedle,false);
+java.addEventListener("touchstart",javaneedle,false);
 
 function hdlneedle(event) {
-	TweenLite.to("#needle", 1, {rotation:-135});
+	TweenLite.to("#needle", 1, {rotation:180});
 }
 
 function htmlneedle(event) {
@@ -40,7 +43,11 @@ function pythonneedle(event) {
 }
 
 function cplusneedle(event) {
-	TweenLite.to("#needle", 1, {rotation:180});
+	TweenLite.to("#needle", 1, {rotation:-135});
+}
+
+function javaneedle(event) {
+	TweenLite.to("#needle", 1, {rotation:0});
 }
 
 

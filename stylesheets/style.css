@@ -408,6 +408,10 @@ nav li:hover {
     justify-content: center;
 }
 
+.about .container .img {
+  margin-top: 8rem;
+}
+
 .header {
     font-family: "roboto-regular", sans-serif;
     text-align: center;
@@ -428,6 +432,7 @@ nav li:hover {
 }
 
 .skillsets .list {
+    margin-top: 9rem;
     margin-bottom: 2rem;
 }
 
@@ -494,7 +499,7 @@ button:hover::before {
 }
 
 .socialmedia {
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 .socialmedia i {
@@ -531,6 +536,96 @@ button:hover::before {
         transform: scale3d(1, 1, 1);
     }
 }
+
+/* SKILLSET */
+#logocontainer {
+  margin-top: 21rem;
+  background: transparent;
+  width: 500px;
+  height: 550px;
+  position: relative;
+  left: 100%;
+  transform: translate(-100%);
+}
+
+#css {
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  width: 8%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+#html {
+  margin: 0;
+  position: absolute;
+  top: 37%;
+  left: 30%;
+  width: 8%;
+  transform: translate(-50%, -50%);
+}
+
+#cplus {
+  margin: 0;
+  position: absolute;
+  top: 37%;
+  left: 70%;
+  width: 8%;
+  transform: translate(-50%, -50%);
+}
+
+#hdl {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 8%;
+  transform: translate(-50%, -50%);
+}
+
+#python {
+  margin: 0 auto;
+  position: absolute;
+  top: 65%;
+  left: 75%;
+  width: 8%;
+  transform: translate(-50%, -50%);
+}
+
+#java {
+  margin: 0 auto;
+  position: absolute;
+  fill: #ccc;
+  top: 80%;
+  left: 50%;
+  width: 10%;
+  transform: translate(-50%, -50%);
+}
+
+#compass {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 40%;
+  opacity: .4;
+  transform: translate(-50%, -60%);
+  z-index: -5;
+}
+
+#needle {
+  width: 50%;
+  margin: 0;
+  position: absolute;
+  z-index: -4;
+  top: 33.5%;
+  left: 25.6%;
+  opacity: .7;
+  transform: translate(-25.8%, -30%);
+}
+
 
 
 /* PROJECTS */
@@ -1223,82 +1318,4 @@ input[type="submit"]:hover {
     .backtotop {
         right: 2rem;
     }
-}
-
-#logocontainer {
-  margin-top: 21rem;
-  background: transparent;
-  width: 500px;
-  height: 550px;
-  position: relative;
-  left: 100%;
-  transform: translate(-100%);
-}
-
-#css {
-  margin: 0;
-  position: absolute;
-  top: 65%;
-  left: 25%;
-  width: 10%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-}
-
-#html {
-  margin: 0;
-  position: absolute;
-  top: 37%;
-  left: 30%;
-  width: 10%;
-  transform: translate(-50%, -50%);
-}
-
-#cplus {
-  margin: 0;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 10%;
-  transform: translate(-50%, -50%);
-}
-
-#hdl {
-  margin: 0;
-  position: absolute;
-  top: 37%;
-  left: 70%;
-  width: 10%;
-  transform: translate(-50%, -50%);
-}
-
-#python {
-  margin: 0 auto;
-  position: absolute;
-  top: 65%;
-  left: 75%;
-  width: 10%;
-  transform: translate(-50%, -50%);
-}
-
-#compass {
-  margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 40%;
-  opacity: .4;
-  transform: translate(-50%, -60%);
-  z-index: -5;
-}
-
-#needle {
-  width: 50%;
-  margin: 0;
-  position: absolute;
-  z-index: -4;
-  top: 33.5%;
-  left: 25.6%;
-  opacity: .7;
-  transform: translate(-25.8%, -30%);
 }
