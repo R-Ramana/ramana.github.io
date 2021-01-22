@@ -613,6 +613,151 @@ button:hover::before {
     transform: translate(-25.8%, -30%);
 }
 
+/* ABOUT EDU/EXP */
+.resume {
+    width: 90%;
+    background: #151515;
+    color: #ffffff;
+    margin: 20px auto;
+    box-shadow: 10px 10px black;
+    position: relative;
+    display: flex;
+}
+.resume li {
+    list-style: none;
+}
+.resume .func {
+    box-sizing: border-box;
+}
+.resume .func>div {
+    padding-bottom: 10px;
+}
+.resume .func>div:last-of-type {
+    padding-bottom: 0;
+}
+.resume .func {
+    width: 100%;
+    padding: 30px;
+}
+.resume .func:hover>div {
+    transition-duration: 0.5s;
+}
+.resume .func:hover>div:hover h3 i {
+    transform: scale(1.25);
+}
+.resume .func:hover>div:not(:hover) {
+    opacity: 0.5;
+}
+.resume .func h3 {
+    transition-duration: 0.3s;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 3.2rem;
+}
+.resume .func h3 i {
+    color: #202020;
+    background: rgba(243, 156, 18, 0.7);
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 17px;
+    transition-duration: 0.3s;
+}
+.resume .func .work {
+    margin-bottom: 30px;
+}
+.resume .func .work {
+    float: left;
+    /* margin-left: 20%; */
+}
+.resume .func .edu {
+    float: right;
+    /* margin-right: 20%; */
+}
+.resume .func .work small,
+.resume .func .edu small {
+    display: block;
+    opacity: 0.7;
+}
+.resume .func .work ul li,
+.resume .func .edu ul li {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 25px;
+    font-size: 2rem;
+}
+.resume .func .work ul li:hover::before,
+.resume .func .edu ul li:hover::before {
+    -webkit-animation: circle 1.2s infinite;
+    animation: circle 1.2s infinite;
+}
+.resume .func .work ul li:hover span,
+.resume .func .edu ul li:hover span {
+    color: rgba(243, 156, 18, 0.7);
+}
+@-webkit-keyframes circle {
+    from {
+        box-shadow: 0 0 0 0px rgba(243, 156, 18, 0.7);
+    }
+    
+    to {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+    }
+}
+@keyframes circle {
+    from {
+        box-shadow: 0 0 0 0px rgba(243, 156, 18, 0.7);
+    }
+    
+    to {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+    }
+}
+.resume .func .work ul li:first-of-type::before,
+.resume .func .edu ul li:first-of-type::before {
+    width: 10px;
+    height: 10px;
+    left: 1px;
+}
+.resume .func .work ul li:last-of-type::after,
+.resume .func .edu ul li:last-of-type::after {
+    border-radius: 1.5px;
+}
+.resume .func .work ul li::before,
+.resume .func .work ul li::after,
+.resume .func .edu ul li::before,
+.resume .func .edu ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.resume .func .work ul li::before,
+.resume .func .edu ul li::before {
+    width: 7px;
+    height: 7px;
+    border: 3px solid #ffffff;
+    background: rgba(243, 156, 18, 0.7);
+    border-radius: 50%;
+    left: 3px;
+    z-index: 1;
+}
+.resume .func .work ul li::after,
+.resume .func .edu ul li::after {
+    width: 3px;
+    height: 100%;
+    background: #ffffff;
+    left: 8px;
+    top: 0;
+}
+.resume .func .work ul li span,
+.resume .func .edu ul li span {
+    transition-duration: 0.3s;
+}
+
 /* PROJECTS */
 .projectdetails {
     display: flex;
@@ -1061,7 +1206,7 @@ select,
 textarea {
     width: 100%;
     padding: 1rem;
-    margin-bottom: 5px;
+    margin: 1rem 0 2rem 0;
     border: none;
     outline-color: #feada6;
 }
@@ -1069,8 +1214,9 @@ input[type="submit"] {
     width: initial;
     background-color: #f39c12;
     color: #000000;
+    margin-top: 1rem;
     padding: 1rem 2rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
     cursor: pointer;
     transition: background-color 650ms;
     font-weight: bold;
