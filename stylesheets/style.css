@@ -315,7 +315,7 @@
     .name h1::before {
         content: '';
         position: absolute;
-        bottom: 3.5rem;
+        bottom: 15rem;
         left: 50%;
         transform: translateX(-50%);
         background-color: #f39c12;
@@ -399,43 +399,7 @@
         transform: translateY(-15px);
     }
 }
-
-/* ABOUT PAGE STYLE */
-.about .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.about .container .img {
-    margin-top: 8rem;
-}
-.header {
-    font-family: "roboto-regular", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 0;
-    margin-bottom: 6rem;
-}
-.header h1 {
-    font-size: 10rem;
-    text-align: center;
-    color: #ccc;
-    opacity: .4;
-}
-.header h6 {
-    font-size: 2rem;
-    text-align: center;
-    color: #ccc;
-}
-.aboutme {
-    flex: 1;
-}
-.skillsets .list {
-    margin-top: 9rem;
-    margin-bottom: 2rem;
-}
-.buttons {
+.button {
     text-align: center;
 }
 .button button {
@@ -473,20 +437,45 @@ button::before {
 button:hover::before {
     width: 120%;
 }
-.caption {
-    font-family: 'Quicksand_Light', sans-serif;
-}
 .socialmedia {
-    margin: 6rem 0;
+    margin-top: 6rem;
 }
 .socialmedia i {
     font-size: 5rem;
     transition: color 650ms;
 }
-.socialmedia i:hover,
-.skillsets i:hover {
+.socialmedia i:hover {
     color: #ffbb4f;
     animation: rubberBand 1s;
+}
+
+/* ABOUT PAGE STYLE */
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    font-family: "roboto-regular", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+}
+.header h1 {
+    font-size: 10rem;
+    text-align: center;
+    color: #ccc;
+    opacity: .4;
+}
+.header h6 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ccc;
+}
+.aboutme {
+    flex: 1;
 }
 @keyframes rubberBand {
     from {
@@ -523,7 +512,7 @@ button:hover::before {
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: bold;
-    padding-top: 150px;
+    padding-top: 100px;
     text-align: center;
     width: 100%;
     bottom: 45%;
@@ -545,13 +534,13 @@ button:hover::before {
     animation: show 5s linear infinite;
 }
 #flip div div {
-    background: #ffbb4f;
+    color: #ffbb4f;
 }
 #flip div:first-child div {
-    background: #F37335;
+    color: #F37335;
 }
 #flip div:last-child div {
-    background: #FDC830;
+    color: #FDC830;
 }
 @keyframes show {
     0% {
@@ -603,10 +592,11 @@ button:hover::before {
 .pl-container {
     width: 100%;
     height: 100%;
+    margin-top: 15rem;
 }
 .wrapper {
     width: 270px;
-    margin: 50px auto;
+    margin: 3rem auto;
     position: Relative;
 }
 .word {
@@ -616,6 +606,17 @@ button:hover::before {
     line-height: 0.8;
     text-transform: uppercase;
     letter-spacing: 0px;
+}
+.word0 {
+    color: white;
+    font-size: 6rem;
+    display: block;
+    text-align: center;
+    /* font-family: "BenchNine"; */
+    
+    line-height: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .word1,
 .word2 {
@@ -838,7 +839,7 @@ button:hover::before {
     position: relative;
     margin-left: 20px;
     padding-left: 25px;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 .resume .func .work ul li:hover::before,
 .resume .func .edu ul li:hover::before {
@@ -973,7 +974,7 @@ form {
     margin: 0 auto;
 }
 form label {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 input,
 select,
@@ -1028,7 +1029,7 @@ input[type="submit"]:hover {
     margin: auto;
 }
 .footer p {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 @keyframes pulse {
     0% {
@@ -1109,10 +1110,6 @@ input[type="submit"]:hover {
         margin: 0 2rem;
     }
     
-    .buttons {
-        margin-top: 2rem;
-    }
-    
     .button button {
         width: 10.5rem;
         height: 5rem;
@@ -1159,7 +1156,6 @@ input[type="submit"]:hover {
             font-size: 8rem;
             margin-top: 2rem;
         }
-        .buttons,
         .socialmedia {
             margin-top: 3rem;
         }
