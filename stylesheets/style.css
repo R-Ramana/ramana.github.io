@@ -508,10 +508,8 @@ button:hover::before {
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 .intro {
-    color: white;
     text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 2.8rem;
     padding-top: 100px;
     text-align: center;
     width: 100%;
@@ -529,6 +527,7 @@ button:hover::before {
     height: 50px;
     margin-bottom: 45px;
     display: inline-block;
+    font-family: 'roboto-regular', 'sans-serif';
 }
 #flip div:first-child {
     animation: show 5s linear infinite;
@@ -542,6 +541,9 @@ button:hover::before {
 #flip div:last-child div {
     color: #FDC830;
 }
+#flip div:nth-child(2) div {
+    color: #FDC830;
+}
 @keyframes show {
     0% {
         margin-top: -270px;
@@ -551,24 +553,28 @@ button:hover::before {
         margin-top: -185px;
     }
     
-    33% {
+    25% {
         margin-top: -185px;
     }
     
-    38% {
+    30% {
         margin-top: -95px;
     }
     
-    66% {
+    50% {
         margin-top: -95px;
     }
     
-    71% {
+    55% {
         margin-top: -4px;
     }
     
-    99.99% {
+    75% {
         margin-top: -4px;
+    }
+    
+    80% {
+        margin-top: -270px;
     }
     
     100% {
@@ -601,7 +607,7 @@ button:hover::before {
 }
 .word {
     display: block;
-    text-align: justify;
+    text-align: center;
     font-family: "BenchNine";
     line-height: 0.8;
     text-transform: uppercase;
@@ -609,14 +615,13 @@ button:hover::before {
 }
 .word0 {
     color: white;
-    font-size: 6rem;
+    font-size: 3.8rem;
     display: block;
     text-align: center;
-    /* font-family: "BenchNine"; */
-    
     line-height: 0.8;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: 'roboto-regular', 'sans-serif';
 }
 .word1,
 .word2 {
@@ -635,10 +640,10 @@ button:hover::before {
     color: #F37335;
 }
 .word1 {
-    font-size: 6.3em;
+    font-size: 5.3em;
 }
 .word2 {
-    font-size: 8.1em;
+    font-size: 7.1em;
 }
 .word3 {
     font-size: 6.8em;
@@ -771,6 +776,10 @@ button:hover::before {
 }
 .response {
     display: none;
+    text-align: center;
+    font-family: 'roboto-regualr', 'sans-serif';
+    margin-top: 1rem;
+    letter-spacing: 2px;
 }
 
 /* ABOUT EDU/EXP */
