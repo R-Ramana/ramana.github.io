@@ -13,12 +13,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 </head>
 
-<body class="loading">
-    <!-- LOADING PAGE -->
-    <div class="loader-wrapper">
-        <span class="loader"></span></span>
-    </div>
-
+<body>
     <!-- NAV BAR -->
     <header>
         <div class="menu">
@@ -30,7 +25,7 @@
         <nav class="navbar">
             <ul class="list">
                 <li><a href="index.html" class="link">Home</a></li>
-                <li><a href="#about" class="link">About Me</a></li>
+                <li><a href="#about" class="link">About</a></li>
                 <li><a href="#experience" class="link">Experience</a></li>
                 <li><a href="#projects" class="link">Projects</a></li>
                 <li><a href="#contactform" class="link">Contact</a></li>
@@ -62,27 +57,22 @@
                 <h6>MYSELF</h6>
             </div>
 
-            <div class="intro">
-                <div class="word0">INTERESTED IN...</div>
-                <div id=flip>
-                    <div>
-                        <div>Web Development</div>
-                    </div>
-                    <div>
-                        <div>Internet of Things</div>
-                    </div>
-                    <div>
-                        <div>Artificial Intelligence</div>
-                    </div>
-                    <div>
-                        <div>Machine Learning</div>
-                    </div>
-                </div>
+            <div class="heading" style="margin-top: 5rem;">
+                <h1>WHO AM I</h1>
             </div>
+            <h1 class="my_name" style="margin-bottom: 1rem; letter-spacing: 2px;"><strong>My name is <span style="color: #f39c12;">Ramana</span>!</strong></h1>
+            <h1 style="font-size: 1.5rem; margin-bottom: 3rem;">(If you haven't already realized)</h1>
+            <h3 style="font-size: 2.5rem; letter-spacing: 1px; text-align: justify;">I am a <span style="color: #f39c12;">Computer Engineer</span> by trade. I really enjoy solving complex problems and I can't stop learning new things! I say computer engineer by trade because I am also very involved in <span style="color: #f39c12;">web development</span>,
+                as well as <span style="color: #f39c12;">UI/UX</span> design and have done a couple of web-dev projects. I am comfortable with many frameworks and libraries and am always exploring new ones. And on this note, I am keen on learning more
+                about <span style="color: #f39c12;">Human-Computer Interactions</span>. I am also passionate about <span style="color: #f39c12;">Artificial Intelligence/Machine
+                Learning</span>. Oh and let's not forget about <span style="color: #f39c12;">Internet of Things</span> (time to smartify everything)!!!! I am extremely interested in IoT and I am a huge fan of automating as many tasks as possible!
+            </h3>
 
             <div class="aboutme">
                 <div class="pl-container">
-                    <div class="word0">SKILLED IN...</div>
+                    <div class="heading">
+                        <h1>TECHNICAL KNOWLEDGE</h1>
+                    </div>
                     <div class="wrapper">
                         <span class="word word1" data-aos="fade-right" data-aos-delay="200">Programming</span>
                         <span class="word word2" data-aos="fade-right" data-aos-delay="200">Languages</span>
@@ -375,9 +365,32 @@
         <p>&copy; 2020 R Ramana</p>
     </footer>
 
+    <!-- INTRO ANIMATION -->
+    <div class="intro">
+        <div class="intro-text-container">
+            <h1 class="hide">
+                <span class="intro-text">Computer Engineer.</span>
+            </h1>
+            <h1 class="hide">
+                <span class="intro-text">Human-Computer Interactions.</span>
+            </h1>
+            <h1 class="hide">
+                <span class="intro-text">Artificial Intelligence/Machine Learning Enthusiast.</span>
+            </h1>
+            <h1 class="hide">
+                <span class="intro-text">Web Developer.</span>
+            </h1>
+            <h1 class="hide">
+                <span class="intro-text">Internet of Things.</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/mainscript.js"></script>
 </body>
