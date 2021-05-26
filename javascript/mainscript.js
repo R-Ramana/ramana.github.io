@@ -1,17 +1,3 @@
-var tl = new TimelineLite();
-tl.staggerFrom(".topics", 3, {
-    css: { transform: "scale(0)", top: "60%", left: "50%" },
-    ease: Elastic.easeOut
-}, 0.3);
-
-// Intro Animation
-var slider_tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-slider_tl.to('.intro-text', { y: "0%", duration: 1, stagger: 0.25 });
-slider_tl.to('.slider', { y: "-100%", duration: 1.5, delay: 1 });
-slider_tl.to('.intro', { y: "-100%", duration: 1 }, "-=1.5");
-slider_tl.fromTo('header', { opacity: 0 }, { opacity: 1, duration: .25 });
-
 $(document).ready(function() {
     // NAVBAR TOGGLE OPEN AND CLOSE
     $('.menu').on('click', function() {
@@ -34,12 +20,37 @@ $(document).ready(function() {
     backtotop.addEventListener("click", function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
-
-    // ANIMATIONS
-    AOS.init({
-        easing: 'ease',
-        duration: 1800,
-        once: true
-    });
-
 });
+
+(function() {
+    "use strict";
+
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+
+    // check if an element is in viewport
+    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+            }
+        }
+    }
+
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+})();
