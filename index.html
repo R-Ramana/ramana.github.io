@@ -1,415 +1,552 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Ramana | Portfolio</title>
-    <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== FAVICON ====================-->
     <link rel="shortcut icon" type="image/png" href="resources/images/favicon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Syncopate&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Ramana | Portfolio</title>
 </head>
 
 <body>
-    <!-- NAV BAR -->
-    <header>
-        <div class="menu">
-            <div class="line half start"></div>
-            <div class="line"></div>
-            <div class="line half end"></div>
-        </div>
-
-        <nav class="navbar">
-            <ul class="list">
-                <li><a href="index.html" class="link">Home</a></li>
-                <li><a href="#about" class="link">About</a></li>
-                <li><a href="#experience" class="link">Experience</a></li>
-                <li><a href="#projects" class="link">Projects</a></li>
-                <li><a href="#contactform" class="link">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- LANDING PAGE CONTENT -->
-        <div class="name">
-            <h1 id="name">R Ramana</h1>
-            <!-- <h6 id="sub">Computer Engineer by trade</h6> -->
-            <!-- SOCIAL MEDIA ICONS -->
-            <div class="socialmedia">
-                <ul class="list">
-                    <li><a href="https://www.linkedin.com/in/ramana-r" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-linkedin"></i></a></li>
-                    <div class="button">
-                        <button type="button"><a href="resources/documents/Ramana_Resume.pdf" target="_blank">Resume</a></button>
-                    </div>
-                    <li><a href="https://github.com/R-Ramana" target="_blank" rel="noopener noreferrer" class="socialmediaicons"><i class="fab fa-github-square"></i></a></li>
+    <!--==================== HEADER ====================-->
+    <header class="border-radius" id="header">
+        <nav>
+            <a href="#home" class="nav-logo">Ramana</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list grid">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active-link">
+                            <i class="uil uil-estate nav-icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <i class="uil uil-info-circle nav-icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">
+                            <i class="uil uil-suitcase nav-icon"></i> Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <i class="uil uil-arrow nav-icon"></i> Technical Expertise
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link">
+                            <i class="uil uil-books nav-icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="uil uil-message nav-icon"></i> Contact Me
+                        </a>
+                    </li>
                 </ul>
+                <i class="uil uil-times nav-close" id="nav-close"></i>
             </div>
-        </div>
+
+            <div class="nav-btn">
+                <!-- Dark Mode / Light Mode -->
+                <div id="toggle-container">
+                    <input type="checkbox" class="checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle" class="label">
+                        <i class="uil uil-moon theme-toggle"></i>
+                        <i class="uil uil-sun theme-toggle" id="main"></i>
+                        <div class="circle-btn theme-toggle translateX" id="circle-btn"></div>
+                    </label>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- ABOUT ME PAGE -->
-    <section class="about" id="about">
-        <div class="container">
-            <!-- <div class="header">
-                <h1 style="margin-top: 6rem;">ABOUT</h1>
-                <h6>MYSELF</h6>
-            </div> -->
-
-            <div class="heading" style="margin-top: 5rem;">
-                <h1>WHO AM I</h1>
-            </div>
-            <!-- <h1 class="my_name" style="margin-bottom: 1rem; letter-spacing: 2px;"><strong>My name is <span style="color: #f39c12;">Ramana</span>!</strong></h1>
-            <h1 style="font-size: 1.5rem; margin-bottom: 3rem;">(If you haven't already realized)</h1> -->
-            <h3 style="font-size: 2.5rem; letter-spacing: 1px; text-align: justify; margin-top: 5rem;">I am a <span style="color: #f39c12;">Computer Engineer</span> by trade. I really enjoy solving complex problems and I can't stop learning new things! I have experience in <span style="color: #f39c12;">web development</span>, as well as
-                <span style="color: #f39c12;">UI/UX</span> design. I have done a couple of web-dev projects and am comfortable with several frameworks and libraries. On this note, I am keen on learning more about
-                <span style="color: #f39c12;">Human-Computer Interactions</span> and <span style="color: #f39c12;">Artificial Intelligence/Machine
-                Learning</span>. I am extremely interested in <span style="color: #f39c12;">Internet of Things</span> and I am a huge fan of automating as many tasks as possible!
-            </h3>
-        </div>
-        </div>
-    </section>
-
-    <section class="tech-knowledge">
-        <div class="container">
-            <div class="heading">
-                <h1>TECHNICAL KNOWLEDGE</h1>
-            </div>
-            <div class="wrapper">
-                <span class="word word1">Programming</span>
-                <span class="word word2">Languages</span>
-                <div class="response">Python | Java | C/C++ | Assembly Language</div>
-                <br>
-                <br>
-                <br>
-                <span class="word word3">Web</span>
-                <span class="word word4">Development</span>
-                <div class="response">Flask (Python) | HTML | CSS</div>
-                <br>
-                <br>
-                <br>
-                <span class="word word5">Software</span>
-                <span class="word word6">Engineering</span>
-                <div class="response">Project Lead | Agile Framework | Git | GitHub</div>
-                <br>
-                <br>
-                <br>
-                <span class="word word7">Hardware</span>
-                <span class="word word8">Development</span>
-                <div class="response">Verilog | Raspberry Pi | ARM® Cortex™-M0+ | Arduino | LiDAR | Real-Time Operating Systems</div>
-
-                <div class="bubble1">
-                    <span class="the-arrow1"></span>C/C++
-                    <br/> Assembly Language
-                    <br/> Python
-                    <br/> Java
-                </div>
-                <div class="bubble2">
-                    <span class="the-arrow2"></span>Flask (Python)
-                    <br/> HTML
-                    <br/> CSS
-
-                </div>
-                <div class="bubble3">
-                    <span class="the-arrow3"></span> Project Lead
-                    <br/> Agile Framework
-                    <br/> Git
-                    <br/> GitHub
-                </div>
-                <div class="bubble4">
-                    <span class="the-arrow4"></span> Verilog<br/> Raspberry Pi
-                    <br/> ARM® Cortex™-M0+
-                    <br/> Arduino
-                    <br/>LiDAR
-                    <br/>Real-Time Operating Systems
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- EXPERIENCE -->
-    <section class="timeline" id="experience">
-        <div class="container">
-            <div class="heading">
-                <h1>Experience</h1>
-            </div>
-            <ul>
-                <li>
-                    <div>
-                        <p class="title">SIAEC</p>
-                        <time>2021</time>
-                        <p class="description">Assist SIAEC Support Divisions' digital transformation by solutioning to business requirements.</p>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home-container container">
+                <div class="home-content grid">
+                    <div class="home-social">
+                        <a href="https://github.com/R-Ramana" target="_blank" class="social-icon">
+                            <i class="uit uil-github-alt"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ramana-r/" target="_blank" class="social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <p class="title">Research Assistant</p>
-                        <time>2020 - 2021</time>
-                        <p class="description">Validated Time Series Forecasting Models to understand the planning of distributed energy resources as well as energy storage.</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p class="title">Government Data Office</p>
-                        <time>2020</time>
-                        <p class="description">1) Worked on developing whole-of-Government policies and frameworks to promote using data securely.
-                            <br>
-                            <br>2) Worked on COVID related data which included data analysis.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
 
-    <!-- PORTFOLIO/PROJECTS PAGE -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="heading">
-                <h1>Projects</h1>
+                    <div class="home-img">
+                        <div class="img-bg">
+                            <img src="assets/img/ramana-3.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="home-info">
+                        <h1 class="home-title">Hello! I am <span>Ramana</span></h1>
+                        <a href="#contact" class="btn btn-flex">
+                            Contact Me! <i class="uil uil-message btn-icon"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-card">
-                <div class="card-container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/Orbital-Knewbie/Knewbie" rel="noopener" target="_blank"><img src="resources/images/knewbie.png" alt="Preview of Knewbie"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/Orbital-Knewbie/Knewbie" rel="noopener" target="_blank">Knewbie</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>Python | Flask | HTML | CSS | JavaScript</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">Done as a summer project, hosted by National University of Singapore (NUS) and supported by the likes of Google and PayPal. The platform is built having PSLE mathematics students in mind. It employs machine learning
-                                        to provide tailored educational content to students, ensuring they learn optimally. The web application is built using Python and Flask framework.</p>
-                                    <br>
-                                    <p class="card-text">From a total of <span style="color: #f39c12">383 projects, Knewbie was 1 of 6 projects</span> selected by the School of Computing (SoC) communication office, NUS and was featured on the <a href="https://www.linkedin.com/feed/update/urn:li:activity:6703488818370215936/"
-                                            style="color: #f39c12" rel="noopener" target="_blank">various social media accounts</a>.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/Orbital-Knewbie/Knewbie" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container container grid">
+                <img src="assets/img/ramana-2.jpg" alt="" class="about-img">
+                <div class="about-info">
+                    <p class="about-description">I am a <span>Computer Engineer</span> by trade. I enjoy solving complex problems and I can't stop learning new things! I have experience in <span>web development</span>, as well as <span>UI/UX</span> design. I have done a couple of
+                        web-dev projects and am comfortable with several frameworks and libraries. On this note, I am keen on learning more about <span>Human-Computer Interactions</span> and <span>Artificial Intelligence/Machine Learning</span>. I am
+                        extremely interested in <span>Internet of Things</span> and am a huge fan of automating as many tasks as possible!</p>
+                </div>
+
+                <div></div>
+
+                <div class="about-btn">
+                    <a download="" href="assets/pdf/Ramana_Resume.pdf" class="btn btn-flex">
+                        Download CV<i class="uil uil-import btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== EXPERIENCE ====================-->
+        <section class="experience" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience-container container">
+                <div class="experience-tab">
+                    <div class="experience-btn experience-active" data-target="#work">
+                        <i class="uil uil-suitcase experience-icon"></i> Work
+                    </div>
+                    <div class="experience-btn" data-target="#education">
+                        <i class="uil uil-graduation-cap experience-icon"></i> Education
+                    </div>
+                </div>
+                <div class="experience-tab-indicator indicator-active" id="experience-indicator"></div>
+
+                <div class="experience-section">
+                    <div class="experience-content experience-active fade" data-content id="work">
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">SIA Engineering Company</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">Intern, Innovation & Technology Division</a></span>
+                                <p class="experience-duration">May 2021 - Present</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/R-Ramana/EE2026-FPGA-Project" rel="noopener" target="_blank"><img src="resources/images/fpga.jpg" alt="Preview of the menu display on the oled screen"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/R-Ramana/EE2026-FPGA-Project" rel="noopener" target="_blank">FPGA Development</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>Verilog</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">Used Verilog for a FPGA Project. Current features include using a mic to read in the volume and an oled display to visualize the volume bar and wave. Also has a built in entertainment system with the ability to play
-                                        a ping pong or a tetris game.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/R-Ramana/EE2026-FPGA-Project" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
+                        <div class="experience-data">
+                            <div></div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title"><a href="https://www.eng.nus.edu.sg/undergraduate/degree-programmes/optional-modules/urop/" rel="noopener" target="_blank">UROP</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.eng.nus.edu.sg/undergraduate/degree-programmes/optional-modules/urop/" rel="noopener" target="_blank">Research Assistant</a></span>
+                                <p class="experience-duration">Aug 2020 - Apr 2021</p>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/AY2021S1-CS2113-T13-1/tp" rel="noopener" target="_blank"><img src="resources/images/notus.png" alt="Preview of the CLI upon start up"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/AY2021S1-CS2113-T13-1/tp" rel="noopener" target="_blank">NotUS</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>Java</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">NotUS is a quick and simple, Command Line Interface (CLI) based, note-taking application for keyboard-inclined users. NotUS allows for users to categorize notes by tagging as well as pinning the more important notes.
-                                        NotUS is also designed to assist in planning timetables to highlight possible clashes.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/AY2021S1-CS2113-T13-1/tp" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Smart Nation & Digital Government Office</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Intern, Government Data Office</a></span>
+                                <p class="experience-duration">Oct 2020 - Dec 2020</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <!-- <span class="experience-line"></span> -->
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/R-Ramana/jane-street-etc" rel="noopener" target="_blank"><img src="resources/images/trading.jpg" alt="Preview of the CLI upon start up"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/R-Ramana/jane-street-etc" rel="noopener" target="_blank">Jane Street ETC</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>Python</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">This automated trading bot for a virtual exchange was built using Python by analysing and estimating fair value. Our team, NullPointerException, won the Last Hour Challenge.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/R-Ramana/jane-street-etc" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
+                        <!-- <div class="experience-data">
+                            <div></div>
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
                             </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/R-Ramana/CG2271" rel="noopener" target="_blank"><img src="https://img.youtube.com/vi/o-zYY2m2vNM/0.jpg" alt="Top view of robot"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/R-Ramana/CG2271" rel="noopener" target="_blank">Real-Time Operating Systems</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>C++ | RTOS</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">The aim of the project is to design a Real-Time Operating System (RTOS) based robotic car that will be controlled through an Android App. The robotic car was able to establish a BT connection with the Android App, receive
-                                        commands from the Android App and execute the correct response, move the car in multiple directions, control the various LED’s according to the car’s status, play different sounds/tunes according to the cars status.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/R-Ramana/CG2271" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/R-Ramana/Alex" rel="noopener" target="_blank"><img src="resources/images/alex.jpg" alt="Side profile of Alex"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/R-Ramana/Alex" rel="noopener" target="_blank">Alex</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>C++ | LiDAR | Raspberry Pi</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">Alex is a robot with search and rescue capabilities. Built with C++, Raspberry Pi, Arduino and is teleoperated. Used LiDAR and SLAM algorithm to generate map of the environment.</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/R-Ramana/Alex" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="col">
-                            <div class="card">
-                                <a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener" target="_blank"><img src="resources/images/mBot.jpg" alt="Overview of mBot"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <br><a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener" target="_blank">A-Maze-ing Race mBot</a></h5>
-                                    </h5>
-                                    <br>
-                                    <p class="tools">
-                                        <span>C++ | Arduino</span>
-                                    </p>
-                                    <br>
-                                    <br>
-                                    <p class="card-text">A robot that was calibrated to traverse a maze by responding to colour and frequency cues. Created using mBot (Arduino platform).</p>
-                                    <br>
-                                    <br>
-                                    <p class="tools">
-                                        <span><a href="https://github.com/R-Ramana/mBot-A-Maze-ing-Race" rel="noopener" target="_blank">View Details</a></span>
-                                    </p>
-                                </div>
+                            <div>
+                                <h3 class="experience-title">Intern</h3>
+                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
+                                <p class="experience-duration">May 2021 - Present</p>
                             </div>
                         </div> -->
+                    </div>
 
+                    <div class="experience-content fade" data-content id="education">
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">National University of Singapore</a></h3>
+                                <span class="experience-subtitle"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">B.Eng. Computer Engineering</a></span>
+                                <p class="experience-duration">2019 - Present</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div></div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title"><a href="https://www.usp.nus.edu.sg/" rel="noopener" target="_blank">National University of Singapore</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.usp.nus.edu.sg/" rel="noopener" target="_blank">University Scholars Programme</a></span>
+                                <p class="experience-duration">2019 - Present</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Hanyang University</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Winter Exchange</a></span>
+                                <p class="experience-duration">Dec 2019 - Jan 2020</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <!-- <span class="experience-line"></span> -->
+                            </div>
+                        </div>
+
+                        <!-- <div class="experience-data">
+                            <div></div>
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title">Intern</h3>
+                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
+                                <p class="experience-duration">May 2021 - Present</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills" id="skills">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-container container grid">
+                <div>
+                    <div class="skill-content list-open">
+                        <div class="skill-header">
+                            <i class="uil uil-brackets-curly skill-icon"></i>
+                            <h1 class="skill-title">Programming</h1>
+                            <i class="uil uil-angle-down skill-arrow"></i>
+                        </div>
+
+                        <div class="skill-list grid">
+                            <div class="skill-data">
+                                <h3 class="skill-item">C/C++</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Assembly Language</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Python</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Java</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-content list-close">
+                        <div class="skill-header">
+                            <i class="uil uil-window skill-icon"></i>
+                            <h1 class="skill-title">Web Development</h1>
+                            <i class="uil uil-angle-down skill-arrow"></i>
+                        </div>
+
+                        <div class="skill-list grid">
+                            <div class="skill-data">
+                                <h3 class="skill-item">HTML</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">CSS</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Flask (Python)</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Adobe XD (UI Design / Prototyping)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-content list-close">
+                        <div class="skill-header">
+                            <i class="uil uil-code-branch skill-icon"></i>
+                            <h1 class="skill-title">Software Engineering</h1>
+                            <i class="uil uil-angle-down skill-arrow"></i>
+                        </div>
+
+                        <div class="skill-list grid">
+                            <div class="skill-data">
+                                <h3 class="skill-item">Agile Framework</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Git</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Github</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-content list-close">
+                        <div class="skill-header">
+                            <i class="uil uil-processor skill-icon"></i>
+                            <h1 class="skill-title">Hardware Development</h1>
+                            <i class="uil uil-angle-down skill-arrow"></i>
+                        </div>
+
+                        <div class="skill-list grid">
+                            <div class="skill-data">
+                                <h3 class="skill-item">Verilog</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Raspberry Pi</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">ARM® Cortex™-M0+</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Arduino</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">LiDAR</h3>
+                            </div>
+                            <div class="skill-data">
+                                <h3 class="skill-item">Real-Time Operating Systems</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!--==================== PORTFOLIO ====================-->
+        <section class="project" id="project">
+            <h2 class="section-title">Projects</h2>
 
-    <!-- CONTACT ME PAGE -->
-    <section class="contactform" id="contactform">
-        <div class="container">
-            <div class="heading-small">
-                <h1>Contact</h1>
+            <div class="project-container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/knewbie.png" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">Knewbie</h3>
+                            <p class="project-subtitle">Python | Flask | HTML | CSS | JavaScript</p>
+                            <p class="project-description">Done as a summer project, hosted by NUS and supported by the likes of Google and PayPal. The platform employs machine learning to provide tailored educational content to PSLE Math students, ensuring they learn optimally. <span>Out of 383 projects, Knewbie was 1 of 6 projects</span>                                to be featured on the <a href="https://www.linkedin.com/feed/update/urn:li:activity:6703488818370215936/" rel="noopener" target="_blank">various social media accounts</a>.</p>
+                            </p>
+                            <a href="https://github.com/Orbital-Knewbie/Knewbie" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/fpga.jpg" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">FPGA Development</h3>
+                            <p class="project-subtitle">Verilog</p>
+                            <p class="project-description">Used Verilog for a FPGA Project. Current features include using a mic to read in the volume and an oled display to visualize the volume bar and wave. Also has a built in entertainment system with the ability to play a ping
+                                pong or a tetris game.</p>
+                            <a href="https://github.com/R-Ramana/EE2026-FPGA-Project" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/success-steel.png" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">Web Design</h3>
+                            <p class="project-subtitle">HTML | CSS | JavaScript</p>
+                            <p class="project-description">A mobile responsive Web Design Project for SUCCESS Engineering & Steel Pte. Ltd.</p>
+                            <a href="http://success-steel.com.sg/" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                View Project <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/notus.png" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">NotUS</h3>
+                            <p class="project-subtitle">Java</p>
+                            <p class="project-description">NotUS is a Command Line Interface (CLI) based note-taking application. NotUS allows for users to categorize notes by tagging as well as pinning the more important notes. NotUS is also designed to assist in scheduling and highlighting
+                                possible clashes.</p>
+                            <a href="https://github.com/AY2021S1-CS2113-T13-1/tp" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/trading.jpg" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">Jane Street ETC</h3>
+                            <p class="project-subtitle">Python</p>
+                            <p class="project-description">This automated trading bot for a virtual exchange was built using Python by analysing and estimating fair value. Our team, NullPointerException, won the Last Hour Challenge.</p>
+                            <a href="https://github.com/R-Ramana/jane-street-etc" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="https://img.youtube.com/vi/o-zYY2m2vNM/0.jpg" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">Real-Time Operating Systems</h3>
+                            <p class="project-subtitle">C++ | RTOS</p>
+                            <p class="project-description">A Real-Time Operating System (RTOS) based robotic car that will be controlled through an Android App, via bluetooth. It receives commands from the App and execute the corresponding response, viz. moving the car; controlling
+                                the LEDs according to the car’s status; and playing different tunes.</p>
+                            <a href="https://github.com/R-Ramana/CG2271" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <img src="assets/img/Alex.jpg" alt="" class="project-img">
+
+                        <div class="project-info">
+                            <h3 class="project-title">Alex</h3>
+                            <p class="project-subtitle">C++ | LiDAR | Raspberry Pi</p>
+                            <p class="project-description">Alex is a robot with search and rescue capabilities. Built with C++, Raspberry Pi, Arduino and is teleoperated. Used LiDAR and SLAM algorithm to generate map of the environment.</p>
+                            <a href="https://github.com/R-Ramana/Alex" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right project-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left project-icon"></i>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <form action="https://formspree.io/xwklkbvz" method="POST" data-aos="fade-up" data-aos-delay="200">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
-                <input type="hidden" name="_subject" value="Online Portfolio" />
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" cols="10" rows="10"></textarea>
-                <input type="text" name="_gotcha" style="display:none" />
-                <!-- FOR DROPDOWN MENUS IF I WANT ONE -->
-                <!-- <label for="dropdown">Select one:</label>
-                <select name="dropdown" id="dropdown">
-                    <option value="">Option 1</option>
-                    <option value="">Option 2</option>
-                    <option value="">Option 3</option>
-                </select> -->
-                <input type="submit" value="Contact Me!">
-            </form>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="backtotop" id="backtotop">
-            <i class="fas fa-chevron-up"></i>
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-container container grid">
+                <form action="https://formsubmit.co/963aca097a2bb92ad142914cad5d3af8" method="POST" class="contact-form grid">
+                    <div class="form-input form-grid">
+                        <div class="form-content">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="input-field" name="Name" id="Name" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-content">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" class="input-field" name="Email" id="Email" placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div class="form-content">
+                            <label for="Subject" class="form-label">Subject</label>
+                            <input type="text" class="input-field" name="Subject" id="Subject" placeholder="Enter A Subject" required>
+                            <input type="hidden" name="_subject" value="R-Ramana.Github.io Contact">
+                        </div>
+                        <div class="form-content">
+                            <label for="Message" class="form-label">Message</label>
+                            <textarea name="" id="" cols="0" rows="8" class="input-field" id="Message" name="Message" placeholder="Enter Your Message" required></textarea>
+                        </div>
+                        <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thankyou.html"> -->
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <button type="submit" class="submit-btn">
+                            <div class="btn btn-flex">
+                                Get In Touch<i class="uil uil-message btn-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer>
+        <div class="footer-bg">
+            <div class="footer-container container grid">
+                <h1 class="footer-title">Ramana</h1>
+                <div class="footer-socials">
+                    <a href="https://github.com/R-Ramana" target="_blank" class="social-icon">
+                        <i class="uit uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ramana-r/" target="_blank" class="social-icon">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-copyright">&#169; 2021 Ramana</p>
         </div>
-        <p>&copy; 2020 R Ramana</p>
     </footer>
 
-    <!-- INTRO ANIMATION -->
-    <!-- <div class="intro">
-        <div class="intro-text-container">
-            <h1 class="hide">
-                <span class="intro-text">Computer Engineer.</span>
-            </h1>
-            <h1 class="hide">
-                <span class="intro-text">Human-Computer Interactions.</span>
-            </h1>
-            <h1 class="hide">
-                <span class="intro-text">Artificial Intelligence/Machine Learning Enthusiast.</span>
-            </h1>
-            <h1 class="hide">
-                <span class="intro-text">Web Developer.</span>
-            </h1>
-            <h1 class="hide">
-                <span class="intro-text">Internet of Things.</span>
-            </h1>
-        </div>
-    </div>
-    <div class="slider"></div> -->
+    <!--==================== BACK TO TOP ====================-->
+    <a href="#" class="to-top" id="to-top">
+        <i class="uil uil-angle-up to-top-icon"></i>
+    </a>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
-    <script src="javascript/mainscript.js"></script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
