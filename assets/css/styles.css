@@ -816,37 +816,49 @@ nav {
 
 /*==================== SKILLS ====================*/
 
-.skill-container {
-    row-gap: 0;
-}
-
-.skill-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--s-2-5);
-    cursor: pointer;
-}
-
 .skill-icon,
 .skill-arrow {
-    font-size: var(--large);
     color: var(--first-color);
 }
 
 .skill-icon {
+    font-size: var(--h1);
     margin-right: var(--s-0-75);
 }
 
-.skill-title {
-    font-size: var(--h3);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--s-0-5);
+.skill-arrow {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: var(--large);
+    transition: transform ease-in-out .3s;
 }
 
-.skill-arrow {
-    margin-left: auto;
-    transition: ease-in-out .5;
+.accordion {
+    max-width: 500px;
+    background: var(--body-color);
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accordion__label,
+.accordion__content {
+    padding: 1rem;
+}
+
+.accordion__label {
+    display: block;
+    color: var(--title-color);
+    position: relative;
+    font-size: var(--h2);
+    cursor: pointer;
+    transition: background ease-in-out .5s;
+}
+
+.accordion__label:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
 .skill-list {
@@ -860,20 +872,21 @@ nav {
     font-weight: var(--medium);
 }
 
-.list-open .skill-list {
-    opacity: 1;
-    height: max-content;
-    margin-bottom: var(--s-2-5);
+.accordion__input,
+.accordion__content {
+    display: none;
 }
 
-.list-open .skill-arrow {
-    transform: rotate(180deg);
+.accordion__input:checked~.accordion__content {
+    display: block;
 }
 
-.list-close .skill-list {
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
+.accordion__input:checked~.accordion__label .skill-arrow {
+    transform: rotate(.5turn);
+}
+
+.skill-data {
+    margin-bottom: 1rem;
 }
 
 
@@ -1063,8 +1076,8 @@ footer {
     .home-blob {
         width: 180px;
     }
-    .skill-title {
-        font-size: var(--normal);
+    .accordion__label {
+        font-size: var(--small);
     }
     .experience-data {
         gap: .5rem;
@@ -1101,6 +1114,9 @@ footer {
         display: grid;
         grid-template-columns: .6fr;
         justify-content: center;
+    }
+    .accordion__label {
+        font-size: var(--normal);
     }
 }
 
@@ -1273,8 +1289,8 @@ footer {
         font-size: var(--h3);
         font-weight: var(--medium);
     }
-    .skill-title {
-        font-size: var(--h1);
+    .accordion__label {
+        font-size: var(--h2);
     }
     .project-title {
         font-size: 1.5rem;

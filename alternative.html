@@ -249,100 +249,96 @@
         <!--==================== SKILLS ====================-->
         <section class="skills" id="skills">
             <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-container container grid">
+            <div class="accordion grid">
                 <div>
-                    <div class="skill-content list-open">
-                        <div class="skill-header">
-                            <i class="uil uil-brackets-curly skill-icon"></i>
-                            <h1 class="skill-title">Programming</h1>
-                            <i class="uil uil-angle-down skill-arrow"></i>
-                        </div>
+                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input">
+                    <label for="prog_lang" class="accordion__label">
+                        <i class="uil uil-brackets-curly skill-icon"></i>
+                        Programming Languages
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
 
-                        <div class="skill-list grid">
-                            <div class="skill-data">
-                                <h3 class="skill-item">C/C++</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Assembly Language</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Python</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Java</h3>
-                            </div>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">C/C++</h3>
                         </div>
-                    </div>
-
-                    <div class="skill-content list-close">
-                        <div class="skill-header">
-                            <i class="uil uil-window skill-icon"></i>
-                            <h1 class="skill-title">Web Development</h1>
-                            <i class="uil uil-angle-down skill-arrow"></i>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Assembly Language</h3>
                         </div>
-
-                        <div class="skill-list grid">
-                            <div class="skill-data">
-                                <h3 class="skill-item">HTML</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">CSS</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Flask (Python)</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Adobe XD (UI Design / Prototyping)</h3>
-                            </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Python</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Java</h3>
                         </div>
                     </div>
-
-                    <div class="skill-content list-close">
-                        <div class="skill-header">
-                            <i class="uil uil-code-branch skill-icon"></i>
-                            <h1 class="skill-title">Software Engineering</h1>
-                            <i class="uil uil-angle-down skill-arrow"></i>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input">
+                    <label for="web_dev" class="accordion__label">
+                        <i class="uil uil-window skill-icon"></i>
+                        Web Development
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">HTML</h3>
                         </div>
-
-                        <div class="skill-list grid">
-                            <div class="skill-data">
-                                <h3 class="skill-item">Agile Framework</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Git</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Github</h3>
-                            </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">CSS</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Flask (Python)</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Adobe XD (UI Design / Prototyping)</h3>
                         </div>
                     </div>
-
-                    <div class="skill-content list-close">
-                        <div class="skill-header">
-                            <i class="uil uil-processor skill-icon"></i>
-                            <h1 class="skill-title">Hardware Development</h1>
-                            <i class="uil uil-angle-down skill-arrow"></i>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="se" class="accordion__input">
+                    <label for="se" class="accordion__label">
+                        <i class="uil uil-code-branch skill-icon"></i>
+                        Software Engineering
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">Agile Framework</h3>
                         </div>
-
-                        <div class="skill-list grid">
-                            <div class="skill-data">
-                                <h3 class="skill-item">Verilog</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Raspberry Pi</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">ARM® Cortex™-M0+</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Arduino</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">LiDAR</h3>
-                            </div>
-                            <div class="skill-data">
-                                <h3 class="skill-item">Real-Time Operating Systems</h3>
-                            </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Git</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Github</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="hw" class="accordion__input">
+                    <label for="hw" class="accordion__label">
+                        <i class="uil uil-processor skill-icon"></i>
+                        Hardware Development
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">Verilog</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Raspberry Pi</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">ARM® Cortex™-M0+</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Arduino</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">LiDAR</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Real-Time Operating Systems</h3>
                         </div>
                     </div>
                 </div>

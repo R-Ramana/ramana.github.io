@@ -52,25 +52,6 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== ACCORDION SKILLS ====================*/
-const skill_content = document.getElementsByClassName('skill-content');
-const skill_header = document.querySelectorAll('.skill-header');
-
-function toggle_skill() {
-    var skill_set = this.parentNode.className;
-
-    for (i = 0; i < skill_content.length; i++) {
-        skill_content[i].className = 'skill-content list-close';
-    }
-    if (skill_set === 'skill-content list-close') {
-        this.parentNode.className = 'skill-content list-open';
-    }
-}
-
-skill_header.forEach((el) => {
-    el.addEventListener('click', toggle_skill);
-})
-
 /*==================== PORTFOLIO SWIPER  ====================*/
 /*  Initialize Swiper */
 let swiper = new Swiper('.project-container', {
