@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== FAVICON ====================-->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Ramana | Portfolio</title>
+</head>
+
+<body class="dark-mode">
+    <!--==================== HEADER ====================-->
+    <header class="border-radius" id="header">
+        <nav>
+            <a href="#home" class="nav-logo">Ramana</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list grid">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active-link">
+                            <i class="uil uil-estate nav-icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <i class="uil uil-info-circle nav-icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">
+                            <i class="uil uil-suitcase nav-icon"></i> Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <i class="uil uil-arrow nav-icon"></i> Technical Expertise
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link">
+                            <i class="uil uil-books nav-icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="uil uil-message nav-icon"></i> Contact Me
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav-close" id="nav-close"></i>
+            </div>
+
+            <div class="nav-btn">
+                <!-- Dark Mode / Light Mode -->
+                <div id="toggle-container">
+                    <a href="index-light.html" rel="noopener"><i class="uil uil-sun theme-toggle dark-icon" id="main"></i></a>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home-container container">
+                <div class="home-content grid">
+                    <div class="home-social">
+                        <a href="https://github.com/R-Ramana" rel="noopener" target="_blank" class="social-icon">
+                            <i class="uit uil-github-alt"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ramana-r/" rel="noopener" target="_blank" class="social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home-img">
+                        <div class="img-bg">
+                            <img src="assets/img/ramana-3.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="home-info">
+                        <h1 class="home-title">Hello! I am <span>Ramana</span></h1>
+                        <a href="#contact" class="btn btn-flex">
+                            Contact Me! <i class="uil uil-message btn-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container container grid">
+                <img src="assets/img/ramana-2.jpg" alt="" class="about-img">
+                <div class="about-info">
+                    <p class="about-description">I am a <span>Computer Engineer</span> by trade. I enjoy solving complex problems and I can't stop learning new things! I have experience in <span>web development</span>, as well as <span>UI/UX</span> design. I have done a couple of
+                        web-dev projects and am comfortable with several frameworks and libraries. On this note, I am keen on learning more about <span>Human-Computer Interactions</span> and <span>Artificial Intelligence/Machine Learning</span>. I am
+                        extremely interested in <span>Internet of Things</span> and am a huge fan of automating as many tasks as possible, all while having <span>green-tech</span> and sustainability in mind.</p>
+                </div>
+
+                <div></div>
+
+                <div class="about-btn">
+                    <a download="" href="assets/pdf/Ramana_Resume.pdf" rel="noopener" class="btn btn-flex">
+                        Download CV<i class="uil uil-import btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== EXPERIENCE ====================-->
+        <section class="experience" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience-container container">
+                <div class="experience-tab">
+                    <div class="experience-btn experience-active" data-target="#work">
+                        <i class="uil uil-suitcase experience-icon"></i> Work
+                    </div>
+                    <div class="experience-btn" data-target="#education">
+                        <i class="uil uil-graduation-cap experience-icon"></i> Education
+                    </div>
+                </div>
+                <div class="experience-tab-indicator indicator-active" id="experience-indicator"></div>
+
+                <div class="experience-section">
+                    <div class="experience-content experience-active fade" data-content id="work">
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">SIA Engineering Company</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">Intern, Innovation & Technology Division</a></span>
+                                <p class="experience-duration">May 2021 - Present</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div></div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title"><a href="https://www.eng.nus.edu.sg/undergraduate/degree-programmes/optional-modules/urop/" rel="noopener" target="_blank">UROP</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.eng.nus.edu.sg/undergraduate/degree-programmes/optional-modules/urop/" rel="noopener" target="_blank">Research Assistant</a></span>
+                                <p class="experience-duration">Aug 2020 - Apr 2021</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Smart Nation & Digital Government Office</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Intern, Government Data Office</a></span>
+                                <p class="experience-duration">Oct 2020 - Dec 2020</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <!-- <span class="experience-line"></span> -->
+                            </div>
+                        </div>
+
+                        <!-- <div class="experience-data">
+                            <div></div>
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title">Intern</h3>
+                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
+                                <p class="experience-duration">May 2021 - Present</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="experience-content fade" data-content id="education">
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">National University of Singapore</a></h3>
+                                <span class="experience-subtitle"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">B.Eng. Computer Engineering</a></span>
+                                <p class="experience-duration">2019 - Present</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div></div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title"><a href="https://www.usp.nus.edu.sg/" rel="noopener" target="_blank">National University of Singapore</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.usp.nus.edu.sg/" rel="noopener" target="_blank">University Scholars Programme</a></span>
+                                <p class="experience-duration">2019 - Present</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-data">
+                            <div class="text-align">
+                                <h3 class="experience-title"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Hanyang University</a></h3>
+                                <span class="experience-subtitle"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Winter Exchange</a></span>
+                                <p class="experience-duration">Dec 2019 - Jan 2020</p>
+                            </div>
+
+                            <div>
+                                <span class="experience-round"></span>
+                                <!-- <span class="experience-line"></span> -->
+                            </div>
+                        </div>
+
+                        <!-- <div class="experience-data">
+                            <div></div>
+                            <div>
+                                <span class="experience-round"></span>
+                                <span class="experience-line"></span>
+                            </div>
+                            <div>
+                                <h3 class="experience-title">Intern</h3>
+                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
+                                <p class="experience-duration">May 2021 - Present</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills" id="skills">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="accordion grid">
+                <div>
+                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input">
+                    <label for="prog_lang" class="accordion__label">
+                        <i class="uil uil-brackets-curly skill-icon"></i>
+                        Programming Languages
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">C/C++</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Assembly Language</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Python</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Java</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input">
+                    <label for="web_dev" class="accordion__label">
+                        <i class="uil uil-window skill-icon"></i>
+                        Web Development
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">HTML</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">CSS</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Flask (Python)</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Adobe XD (UI Design / Prototyping)</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="se" class="accordion__input">
+                    <label for="se" class="accordion__label">
+                        <i class="uil uil-code-branch skill-icon"></i>
+                        Software Engineering
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">Agile Framework</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Git</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Github</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" name="accordion" id="hw" class="accordion__input">
+                    <label for="hw" class="accordion__label">
+                        <i class="uil uil-processor skill-icon"></i>
+                        Hardware Development
+                        <i class="uil uil-angle-down skill-arrow"></i>
+                    </label>
+                    <div class="skill-list grid accordion__content">
+                        <div class="skill-data">
+                            <h3 class="skill-item">Verilog</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Raspberry Pi</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">ARM® Cortex™-M0+</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Arduino</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">LiDAR</h3>
+                        </div>
+                        <div class="skill-data">
+                            <h3 class="skill-item">Real-Time Operating Systems</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="project" id="project">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow">
+                                <img src="assets/img/knewbie.png" alt="" class="project-img img-animation">
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">Knewbie</h3>
+                            <p class="project-subtitle">Python | Flask | HTML | CSS | JavaScript</p>
+                            <p class="project-description">Done as a summer project, hosted by NUS and supported by the likes of Google and PayPal. The platform employs machine learning to provide tailored educational content to PSLE Math students, ensuring they learn optimally. <span>Out of 383 projects, Knewbie was 1 of 6 projects</span>                                to be featured on the <a href="https://www.linkedin.com/feed/update/urn:li:activity:6703488818370215936/" rel="noopener" target="_blank">various social media accounts</a>.</p>
+                            </p>
+                            <a href="https://github.com/Orbital-Knewbie/Knewbie" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow">
+                                <img src="assets/img/fpga.jpg" alt="" class="project-img img-animation">
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">FPGA Development</h3>
+                            <p class="project-subtitle">Verilog</p>
+                            <p class="project-description">Used Verilog for a FPGA Project. Current features include using a mic to read in the volume and an oled display to visualize the volume bar and wave. Also has a built in entertainment system with the ability to play a ping
+                                pong or a tetris game.</p>
+                            <a href="https://github.com/R-Ramana/EE2026-FPGA-Project" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow">
+                                <img src="assets/img/success-steel.png" alt="" class="project-img img-animation">
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">Web Design</h3>
+                            <p class="project-subtitle">HTML | CSS | JavaScript</p>
+                            <p class="project-description">A mobile responsive Web Design Project for SUCCESS Engineering & Steel Pte. Ltd.</p>
+                            <a href="http://success-steel.com.sg/" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                View Project <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow"><img src="assets/img/notus.png" alt="" class="project-img img-animation"></div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">NotUS</h3>
+                            <p class="project-subtitle">Java</p>
+                            <p class="project-description">NotUS is a Command Line Interface (CLI) based note-taking application. NotUS allows for users to categorize notes by tagging as well as pinning the more important notes. NotUS is also designed to assist in scheduling and highlighting
+                                possible clashes.</p>
+                            <a href="https://github.com/AY2021S1-CS2113-T13-1/tp" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow"><img src="assets/img/trading.jpg" alt="" class="project-img img-animation"></div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">Jane Street ETC</h3>
+                            <p class="project-subtitle">Python</p>
+                            <p class="project-description">This automated trading bot for a virtual exchange was built using Python by analysing and estimating fair value. Our team, NullPointerException, won the Last Hour Challenge.</p>
+                            <a href="https://github.com/R-Ramana/jane-street-etc" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow"><img src="https://img.youtube.com/vi/o-zYY2m2vNM/0.jpg" alt="" class="project-img img-animation"></div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">Real-Time Operating Systems</h3>
+                            <p class="project-subtitle">C++ | RTOS</p>
+                            <p class="project-description">A Real-Time Operating System (RTOS) based robotic car that will be controlled through an Android App, via bluetooth. It receives commands from the App and execute the corresponding response, viz. moving the car; controlling
+                                the LEDs according to the car’s status; and playing different tunes.</p>
+                            <a href="https://github.com/R-Ramana/CG2271" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-content grid swiper-slide">
+                        <div class="project-img-container">
+                            <div class="project-img-overflow">
+                                <img src="assets/img/Alex.jpg" alt="" class="project-img img-animation">
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <h3 class="project-title">Alex</h3>
+                            <p class="project-subtitle">C++ | LiDAR | Raspberry Pi</p>
+                            <p class="project-description">Alex is a robot with search and rescue capabilities. Built with C++, Raspberry Pi, Arduino and is teleoperated. Used LiDAR and SLAM algorithm to generate map of the environment.</p>
+                            <a href="https://github.com/R-Ramana/Alex" class="btn btn-flex btn-small project-btn" rel="noopener" target="_blank">
+                                Learn More <i class="uil uil-arrow-right btn-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right project-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left project-icon"></i>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-container container grid">
+                <form action="https://formsubmit.co/963aca097a2bb92ad142914cad5d3af8" method="POST" class="contact-form grid">
+                    <div class="form-input form-grid">
+                        <div class="form-content input-field-height">
+                            <input type="text" class="input-field" name="Name" id="Name" placeholder="" required>
+                            <label for="Name" class="form-label">Name</label>
+                        </div>
+                        <div class="form-content input-field-height">
+                            <input type="email" class="input-field" name="Email" id="Email" placeholder="" required>
+                            <label for="Email" class="form-label">Email</label>
+                        </div>
+                        <div class="form-content input-field-height">
+                            <input type="text" class="input-field" name="Subject" id="Subject" placeholder="" required>
+                            <label for="Subject" class="form-label">Subject</label>
+                            <input type="hidden" name="_subject" value="R-Ramana.Github.io Contact">
+                        </div>
+                        <div class="form-content text-field-height">
+                            <textarea cols="0" rows="8" class="input-field" id="Message" name="Message" placeholder="" required></textarea>
+                            <label for="Message" class="form-label">Message</label>
+                        </div>
+                        <input type="hidden" name="_next" value="https://r-ramana.github.io/thankyou.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <button type="submit" class="submit-btn">
+                            <div class="btn btn-flex">
+                                Get In Touch<i class="uil uil-message btn-icon"></i>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer>
+        <div class="footer-bg">
+            <div class="footer-container container grid">
+                <h1 class="footer-title">Ramana</h1>
+                <div class="footer-socials">
+                    <a href="https://github.com/R-Ramana" target="_blank" rel="noopener" class="social-icon">
+                        <i class="uit uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ramana-r/" target="_blank" rel="noopener" class="social-icon">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer-copyright">&#169; 2021 Ramana</p>
+        </div>
+    </footer>
+
+    <!--==================== BACK TO TOP ====================-->
+    <a href="#" class="to-top" id="to-top">
+        <i class="uil uil-angle-up to-top-icon"></i>
+    </a>
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

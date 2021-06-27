@@ -12,7 +12,7 @@
     --hue-color: 350;
     /* hsl(250, 69%, 61%) */
     /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-    /* HSL color mode */
+    /* HSL LIGHT color mode */
     --first-color: hsl(var(--hue-color), 69%, 53%);
     --first-color-second: hsl(var(--hue-color), 69%, 31%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -97,10 +97,7 @@ body {
 /*========== Variables Dark theme ==========*/
 
 body.dark-mode {
-    /* --first-color: hsl(var(--hue-color), 69%, 53%); */
     --first-color-second: hsl(var(--hue-color), 30%, 59%);
-    /*--first-color-alt: hsl(var(--hue-color), 57%, 53%);
---first-color-lighter: hsl(var(--hue-color), 92%, 85%); */
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --text-color-light: hsl(var(--hue-color), 8%, 75%);
@@ -164,6 +161,11 @@ body.dark-mode {
     transition: transform 0.5s ease-in-out;
 }
 
+.dark-icon {
+    margin-right: .5rem;
+    font-size: var(--h2);
+}
+
 
 /*==================== BASE ====================*/
 
@@ -183,9 +185,14 @@ a {
     text-decoration: none;
 }
 
-img {
-    /* max-width: 100%; */
-    /* height: auto; */
+*:focus-visible {
+    outline: 2px solid var(--first-color);
+    border-radius: 1rem;
+}
+
+::selection {
+    color: var(--input-color);
+    background: var(--first-color-second);
 }
 
 
@@ -205,16 +212,16 @@ section {
 
 
 /* .section-title::before {
-content: '';
-position: absolute;
-bottom: -1.9rem;
-left: 50%;
-transform: translateX(-50%) translateY(2rem);
-background-color: var(--first-color-alt);
-width: 7.5rem;
-height: 3px;
-border-radius: 0.8rem;
-opacity: .6;
+    content: '';
+    position: absolute;
+    bottom: 7.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(2rem);
+    background-color: var(--first-color-alt);
+    width: 7.5rem;
+    height: 3px;
+    border-radius: 0.8rem;
+    opacity: .6;
 } */
 
 
