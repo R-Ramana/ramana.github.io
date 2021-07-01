@@ -108,9 +108,15 @@
 
         <!--==================== ABOUT ====================-->
         <section class="about" id="about">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About Me
+                <div class="border-bottom"></div>
+            </h2>
             <div class="about-container container grid">
-                <img src="assets/img/ramana-2.jpg" alt="" class="about-img">
+                <div class="about-img-container">
+                    <div class="img-overflow">
+                        <img src="assets/img/ramana-2.jpg" alt="" class="about-img img-animation">
+                    </div>
+                </div>
                 <div class="about-info">
                     <p class="about-description">I am a <span>Computer Engineer</span> by trade. I enjoy solving complex problems and I can't stop learning new things! I have experience in <span>web development</span>, as well as <span>UI/UX</span> design. I have done a couple of
                         web-dev projects and am comfortable with several frameworks and libraries. On this note, I am keen on learning more about <span>Human-Computer Interactions</span> and <span>Artificial Intelligence/Machine Learning</span>. I am
@@ -129,28 +135,31 @@
 
         <!--==================== EXPERIENCE ====================-->
         <section class="experience" id="experience">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Experience
+                <div class="border-bottom"></div>
+            </h2>
 
-            <div class="experience-container container">
-                <div class="experience-tab">
-                    <div class="experience-btn experience-active" data-target="#work">
-                        <i class="uil uil-suitcase experience-icon"></i> Work
-                    </div>
-                    <div class="experience-btn" data-target="#education">
-                        <i class="uil uil-graduation-cap experience-icon"></i> Education
-                    </div>
-                </div>
-                <div class="experience-tab-indicator indicator-active" id="experience-indicator"></div>
+            <div class="tabs-container">
+                <input type="radio" name="tab" id="work" checked="checked">
+                <label for="work">
+                    <i class="uil uil-suitcase experience-icon"></i><span>Work</span>
+                    <div class="tab-indicator"></div>
+                </label>
 
-                <div class="experience-section">
-                    <div class="experience-content experience-active fade" data-content id="work">
+                <input type="radio" name="tab" id="education">
+                <label for="education">
+                    <i class="uil uil-graduation-cap experience-icon"></i><span>Education</span>
+                    <div class="tab-indicator"></div>
+                </label>
+
+                <div class="tab-content">
+                    <div class="content-container" id="work-content">
                         <div class="experience-data">
-                            <div class="text-align">
+                            <div>
                                 <h3 class="experience-title"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">SIA Engineering Company</a></h3>
                                 <span class="experience-subtitle"><a href="https://www.siaec.com.sg/" rel="noopener" target="_blank">Intern, Innovation & Technology Division</a></span>
                                 <p class="experience-duration">May 2021 - Present</p>
                             </div>
-
                             <div>
                                 <span class="experience-round"></span>
                                 <span class="experience-line"></span>
@@ -159,7 +168,6 @@
 
                         <div class="experience-data">
                             <div></div>
-
                             <div>
                                 <span class="experience-round"></span>
                                 <span class="experience-line"></span>
@@ -172,35 +180,21 @@
                         </div>
 
                         <div class="experience-data">
-                            <div class="text-align">
+                            <div>
                                 <h3 class="experience-title"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Smart Nation & Digital Government Office</a></h3>
                                 <span class="experience-subtitle"><a href="https://www.smartnation.gov.sg/" rel="noopener" target="_blank">Intern, Government Data Office</a></span>
                                 <p class="experience-duration">Oct 2020 - Dec 2020</p>
                             </div>
-
                             <div>
                                 <span class="experience-round"></span>
                                 <!-- <span class="experience-line"></span> -->
                             </div>
                         </div>
-
-                        <!-- <div class="experience-data">
-                            <div></div>
-                            <div>
-                                <span class="experience-round"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience-title">Intern</h3>
-                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
-                                <p class="experience-duration">May 2021 - Present</p>
-                            </div>
-                        </div> -->
                     </div>
 
-                    <div class="experience-content fade" data-content id="education">
+                    <div class="content-container" id="education-content">
                         <div class="experience-data">
-                            <div class="text-align">
+                            <div>
                                 <h3 class="experience-title"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">National University of Singapore</a></h3>
                                 <span class="experience-subtitle"><a href="https://ceg.nus.edu.sg/" rel="noopener" target="_blank">B.Eng. Computer Engineering</a></span>
                                 <p class="experience-duration">2019 - Present</p>
@@ -227,7 +221,7 @@
                         </div>
 
                         <div class="experience-data">
-                            <div class="text-align">
+                            <div>
                                 <h3 class="experience-title"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Hanyang University</a></h3>
                                 <span class="experience-subtitle"><a href="https://www.hanyang.ac.kr/web/eng" rel="noopener" target="_blank">Winter Exchange</a></span>
                                 <p class="experience-duration">Dec 2019 - Jan 2020</p>
@@ -238,28 +232,16 @@
                                 <!-- <span class="experience-line"></span> -->
                             </div>
                         </div>
-
-                        <!-- <div class="experience-data">
-                            <div></div>
-                            <div>
-                                <span class="experience-round"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience-title">Intern</h3>
-                                <span class="experience-subtitle">Singapore Airlines Engineering Company</span>
-                                <p class="experience-duration">May 2021 - Present</p>
-                            </div>
-                        </div> -->
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!--==================== SKILLS ====================-->
         <section class="skills" id="skills">
-            <h2 class="section-title">Technical Expertise</h2>
+            <h2 class="section-title">Technical Expertise
+                <div class="border-bottom"></div>
+            </h2>
             <div class="accordion grid">
                 <div>
                     <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input">
@@ -358,7 +340,9 @@
 
         <!--==================== PORTFOLIO ====================-->
         <section class="project" id="project">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Projects
+                <div class="border-bottom"></div>
+            </h2>
 
             <div class="project-container container swiper-container">
                 <div class="swiper-wrapper">
@@ -494,7 +478,9 @@
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact" id="contact">
-            <h2 class="section-title">Contact Me</h2>
+            <h2 class="section-title">Contact Me
+                <div class="border-bottom"></div>
+            </h2>
 
             <div class="contact-container container grid">
                 <form action="https://formsubmit.co/963aca097a2bb92ad142914cad5d3af8" method="POST" class="contact-form grid">

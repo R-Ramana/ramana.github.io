@@ -24,34 +24,6 @@ if (nav_close) {
 
 nav_link.forEach(n => n.addEventListener('click', remove));
 
-/*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]');
-const tab_content = document.querySelectorAll('[data-content]');
-const tab_indicator = document.getElementById('experience-indicator');
-
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target)
-        console.log(tab.dataset.target)
-
-        if (tab.dataset.target === '#education') {
-            tab_indicator.classList.remove('indicator-active')
-        } else if (tab.dataset.target === '#work') {
-            tab_indicator.classList.add('indicator-active')
-        }
-
-        tab_content.forEach(tab_item => {
-            tab_item.classList.remove('experience-active')
-        })
-        target.classList.add('experience-active')
-
-        tabs.forEach(tab => {
-            tab.classList.remove('experience-active')
-        })
-        tab.classList.add('experience-active')
-    })
-})
-
 /*==================== PORTFOLIO SWIPER  ====================*/
 /*  Initialize Swiper */
 let swiper = new Swiper('.project-container', {
