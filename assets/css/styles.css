@@ -819,6 +819,10 @@ nav {
     column-gap: var(--s-1-5);
 }
 
+.text-align {
+    text-align: right;
+}
+
 .experience-title {
     font-size: var(--normal);
     font-weight: var(--medium);
@@ -1031,6 +1035,86 @@ nav {
 
 .swiper-pagination-bullet-active {
     background-color: var(--first-color);
+}
+
+
+/*==================== CSS ONLY PROJECTS ====================*/
+
+.css-gallery-section {
+    margin-top: 4rem;
+}
+
+.css-projects-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.css-projects-container {
+    width: 22.5%;
+    position: relative;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.css-projects-container img {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .3s ease-in-out;
+}
+
+.css-projects-container:focus,
+.css-projects-container:hover {
+    transform: scale(1.15);
+    z-index: 1;
+}
+
+.css-projects-container:focus img,
+.css-projects-container:hover img {
+    filter: blur(3px);
+}
+
+.inner-box,
+.css-btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+
+.inner-box {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.css-btn {
+    margin-top: 0;
+}
+
+.css-projects-container:focus .inner-box,
+.css-projects-container:hover .inner-box {
+    opacity: .5;
+}
+
+.css-projects-container:focus .css-btn,
+.css-projects-container:hover .css-btn {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .css-projects-container {
+        width: 100%;
+    }
+    .css-projects-container:focus,
+    .css-projects-container:hover {
+        transform: none;
+    }
 }
 
 
