@@ -674,7 +674,7 @@ nav {
 .home-info .btn {
     opacity: 0;
     transform: translateY(3rem);
-    animation: fadeIn 2s ease 2.5s forwards;
+    animation: fadeIn 2s ease .5s forwards;
 }
 
 @keyframes fadeIn {
@@ -755,7 +755,7 @@ nav {
     float: left;
     width: calc(100% / 2);
     text-align: center;
-    opacity: .5;
+    opacity: .7;
     transform: scale(.85);
     transition: .3s ease-in-out;
 }
@@ -772,12 +772,11 @@ nav {
 }
 
 .tabs-container input[type="radio"]:hover+label {
-    color: var(--first-color-second);
-    opacity: .7;
+    color: var(--first-color);
 }
 
 .tab-indicator {
-    border-bottom: 3px solid var(--first-color);
+    border-bottom: 1.5px solid var(--first-color);
     border-radius: 50%;
     width: 30%;
     margin: 0 auto;

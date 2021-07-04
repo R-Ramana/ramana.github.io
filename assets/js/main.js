@@ -83,8 +83,23 @@ function back_to_top() {
 window.addEventListener('scroll', back_to_top);
 
 /*==================== TOGGLE DARK / LIGHT THEME ====================*/
-const checkbox = document.getElementById('dark-mode-toggle');
+var checkbox = document.getElementById('dark-mode-toggle');
+var currentTheme = localStorage.getItem('selected-theme');
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode')
+    checkbox.checked = true
+} else {
+    document.body.classList.remove('dark-mode')
+    checkbox.checked = false
+}
+
 checkbox.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode')
-    localStorage.setItem('selected-theme', getCurrentTheme())
+    if (checkbox.checked) {
+        document.body.classList.add('dark-mode')
+        localStorage.setItem('selected-theme', 'dark')
+    } else {
+        document.body.classList.remove('dark-mode')
+        localStorage.setItem('selected-theme', 'light')
+    }
 });
