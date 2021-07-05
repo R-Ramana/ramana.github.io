@@ -24,6 +24,30 @@ if (nav_close) {
 
 nav_link.forEach(n => n.addEventListener('click', remove));
 
+/*==================== TOGGLE DARK / LIGHT THEME ====================*/
+var currentTheme = localStorage.getItem('selected-theme');
+var checkbox = document.getElementById('dark-mode-toggle')
+
+// Get User Preference
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode')
+    checkbox.checked = true
+} else {
+    document.body.classList.remove('dark-mode')
+    checkbox.checked = false
+}
+
+// Store User Preference in Local Storage
+checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+        document.body.classList.add('dark-mode')
+        localStorage.setItem('selected-theme', 'dark')
+    } else {
+        document.body.classList.remove('dark-mode')
+        localStorage.setItem('selected-theme', 'light')
+    }
+});
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 /*  Initialize Swiper */
 let swiper = new Swiper('.project-container', {
@@ -62,14 +86,15 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== ADD BORDER RADIUS & BOX SHADOW TO NAV ====================*/
+/*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
     const nav = document.getElementById('header');
     const limit = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
     // When the scroll is greater than 20 viewport height, add the scroll-header class to the header tag
-    if (this.scrollY >= limit - 50) nav.classList.remove('scroll-header');
-    else if (this.scrollY >= 20) nav.classList.add('scroll-header');
-    else nav.classList.remove('scroll-header')
+    if (this.scrollY >= limit - 50) checkbox.checked ? nav.classList.remove('scroll-header-dark') : nav.classList.remove('scroll-header');
+    else if (this.scrollY >= 20) checkbox.checked ? nav.classList.add('scroll-header-dark') : nav.classList.add('scroll-header');
+    else checkbox.checked ? nav.classList.remove('scroll-header-dark') : nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader);
 
@@ -81,25 +106,3 @@ function back_to_top() {
     else to_top.classList.remove('to-top-btn')
 }
 window.addEventListener('scroll', back_to_top);
-
-/*==================== TOGGLE DARK / LIGHT THEME ====================*/
-var checkbox = document.getElementById('dark-mode-toggle');
-var currentTheme = localStorage.getItem('selected-theme');
-
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode')
-    checkbox.checked = true
-} else {
-    document.body.classList.remove('dark-mode')
-    checkbox.checked = false
-}
-
-checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-        document.body.classList.add('dark-mode')
-        localStorage.setItem('selected-theme', 'dark')
-    } else {
-        document.body.classList.remove('dark-mode')
-        localStorage.setItem('selected-theme', 'light')
-    }
-});
