@@ -61,7 +61,7 @@
             <div class="nav-btn">
                 <!-- Dark Mode / Light Mode -->
                 <div id="toggle-container">
-                    <a href="index-light.html" rel="noopener"><i class="uil uil-sun theme-toggle dark-icon" id="main"></i></a>
+                    <a href="index-light.html" rel="noopener" aria-label="Switch to Light Mode"><i class="uil uil-sun theme-toggle dark-icon" id="main"></i></a>
                 </div>
 
                 <div class="nav-toggle" id="nav-toggle">
@@ -240,9 +240,9 @@
                 <div class="border-bottom"></div>
             </h2>
             <div class="accordion grid">
-                <div>
-                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input">
-                    <label for="prog_lang" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input" aria-label="Check to see the programming languages I am familiar with" onclick="changeARIA();">
+                    <label for="prog_lang" class="accordion__label" aria-label="programming languages">
                         <i class="uil uil-brackets-curly skill-icon"></i>
                         Programming Languages
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -263,9 +263,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input">
-                    <label for="web_dev" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input" aria-label="Check to see the Web Development Tools I am comfortable with" onclick="changeARIA();">
+                    <label for="web_dev" class="accordion__label" aria-label="web development">
                         <i class="uil uil-window skill-icon"></i>
                         Web Development
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -285,9 +285,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="se" class="accordion__input">
-                    <label for="se" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="se" class="accordion__input" aria-label="Check to see the Software Engineering Tools I have experience with" onclick="changeARIA();">
+                    <label for="se" class="accordion__label" aria-label="software engineering">
                         <i class="uil uil-code-branch skill-icon"></i>
                         Software Engineering
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -304,9 +304,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="hw" class="accordion__input">
-                    <label for="hw" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="hw" class="accordion__input" aria-label="Check to see the hardware tools and frameworks I have used before" onclick="changeARIA();">
+                    <label for="hw" class="accordion__label" aria-label="hardware development">
                         <i class="uil uil-processor skill-icon"></i>
                         Hardware Development
                         <i class="uil uil-angle-down skill-arrow"></i>

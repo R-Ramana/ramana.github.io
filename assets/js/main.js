@@ -32,9 +32,11 @@ var checkbox = document.getElementById('dark-mode-toggle')
 if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode')
     checkbox.checked = true
+    checkbox.setAttribute("aria-label", "Uncheck to switch to light theme")
 } else {
     document.body.classList.remove('dark-mode')
     checkbox.checked = false
+    checkbox.setAttribute("aria-label", "Check to switch to dark theme")
 }
 
 // Store User Preference in Local Storage
@@ -42,11 +44,26 @@ checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         document.body.classList.add('dark-mode')
         localStorage.setItem('selected-theme', 'dark')
+        checkbox.setAttribute("aria-label", "Uncheck to switch to light theme")
     } else {
         document.body.classList.remove('dark-mode')
         localStorage.setItem('selected-theme', 'light')
+        checkbox.setAttribute("aria-label", "Check to switch to dark theme")
     }
 });
+
+/*==================== TECHNICAL EXPERTISE ACCESSIBILITY  ====================*/
+function changeARIA() {
+    var hwCheckbox = document.getElementById('hw')
+    var seCheckbox = document.getElementById('se')
+    var plCheckbox = document.getElementById('prog_lang')
+    var wdCheckbox = document.getElementById('web_dev')
+
+    hwCheckbox.checked ? hwCheckbox.setAttribute("aria-label", "Uncheck to see less") : hwCheckbox.setAttribute("aria-label", "Check to see the hardware tools and frameworks I have used before")
+    seCheckbox.checked ? seCheckbox.setAttribute("aria-label", "Uncheck to see less") : seCheckbox.setAttribute("aria-label", "Check to see the Software Engineering Tools I have experience with")
+    plCheckbox.checked ? plCheckbox.setAttribute("aria-label", "Uncheck to see less") : plCheckbox.setAttribute("aria-label", "Check to see the programming languages I am familiar with")
+    wdCheckbox.checked ? wdCheckbox.setAttribute("aria-label", "Uncheck to see less") : wdCheckbox.setAttribute("aria-label", "Check to see the Web Development Tools I am comfortable with")
+}
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 /*  Initialize Swiper */

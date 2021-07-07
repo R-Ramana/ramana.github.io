@@ -84,8 +84,8 @@
 
             <div class="nav-btn">
                 <!-- Dark Mode / Light Mode -->
-                <div id="toggle-container" aria-label="Dark Mode Toggle">
-                    <input type="checkbox" class="checkbox" id="dark-mode-toggle" tabindex="0">
+                <div id="toggle-container">
+                    <input type="checkbox" class="checkbox" id="dark-mode-toggle" tabindex="0" aria-label="Uncheck to switch to light theme">
                     <label for="dark-mode-toggle" class="label">
                         <i class="uil uil-moon theme-toggle"></i>
                         <i class="uil uil-sun theme-toggle" id="main"></i>
@@ -168,15 +168,15 @@
             <div class="tabs-container">
                 <input type="radio" name="tab" id="work" checked="checked">
                 <label for="work">
-                    <i class="uil uil-suitcase experience-icon"></i><span>Work</span>
-                    <div class="tab-indicator"></div>
-                </label>
+                        <i class="uil uil-suitcase experience-icon"></i><span>Work</span>
+                        <div class="tab-indicator"></div>
+                    </label>
 
                 <input type="radio" name="tab" id="education">
                 <label for="education">
-                    <i class="uil uil-graduation-cap experience-icon"></i><span>Education</span>
-                    <div class="tab-indicator"></div>
-                </label>
+                        <i class="uil uil-graduation-cap experience-icon"></i><span>Education</span>
+                        <div class="tab-indicator"></div>
+                    </label>
 
                 <div class="tab-content">
                     <div class="content-container" id="work-content">
@@ -269,9 +269,9 @@
                 <div class="border-bottom"></div>
             </h2>
             <div class="accordion grid">
-                <div>
-                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input">
-                    <label for="prog_lang" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="prog_lang" class="accordion__input" aria-label="Check to see the programming languages I am familiar with" onclick="changeARIA();">
+                    <label for="prog_lang" class="accordion__label" aria-label="programming languages">
                         <i class="uil uil-brackets-curly skill-icon"></i>
                         Programming Languages
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -292,9 +292,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input">
-                    <label for="web_dev" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="web_dev" class="accordion__input" aria-label="Check to see the Web Development Tools I am comfortable with" onclick="changeARIA();">
+                    <label for="web_dev" class="accordion__label" aria-label="web development">
                         <i class="uil uil-window skill-icon"></i>
                         Web Development
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -314,9 +314,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="se" class="accordion__input">
-                    <label for="se" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="se" class="accordion__input" aria-label="Check to see the Software Engineering Tools I have experience with" onclick="changeARIA();">
+                    <label for="se" class="accordion__label" aria-label="software engineering">
                         <i class="uil uil-code-branch skill-icon"></i>
                         Software Engineering
                         <i class="uil uil-angle-down skill-arrow"></i>
@@ -333,9 +333,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="accordion" id="hw" class="accordion__input">
-                    <label for="hw" class="accordion__label">
+                <div tabindex="0">
+                    <input type="checkbox" name="accordion" id="hw" class="accordion__input" aria-label="Check to see the hardware tools and frameworks I have used before" onclick="changeARIA();">
+                    <label for="hw" class="accordion__label" aria-label="hardware development">
                         <i class="uil uil-processor skill-icon"></i>
                         Hardware Development
                         <i class="uil uil-angle-down skill-arrow"></i>
