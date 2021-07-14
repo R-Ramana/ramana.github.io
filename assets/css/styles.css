@@ -124,7 +124,7 @@ body.dark-mode {
     max-width: 80%;
     width: max-content;
     min-width: 320px;
-    top: 5%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: .5rem;
@@ -136,7 +136,7 @@ body.dark-mode {
 
 .noscript__alert-icon {
     display: inline;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--first-color-second);
 }
 
@@ -152,6 +152,7 @@ body.dark-mode {
     margin-left: 1rem;
     padding: 1rem;
     color: black;
+    font-size: var(--extra-small);
 }
 
 .noscript__alert-message a {
@@ -823,20 +824,11 @@ nav {
 
 .home-info .btn:hover .btn-icon,
 .thankyou-content .btn:hover .btn-icon,
-.noscript-container .btn:hover .right,
 .home-info .btn:focus .btn-icon,
-.thankyou-content .btn:focus .btn-icon,
-.noscript-container .btn:focus .right {
+.thankyou-content .btn:focus .btn-icon {
     -webkit-transform: translateX(var(--s-0-25));
     -ms-transform: translateX(var(--s-0-25));
     transform: translateX(var(--s-0-25));
-}
-
-.noscript-container .btn:hover .spin,
-.noscript-container .btn:focus .spin {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
 }
 
 .home-info .btn {
@@ -1607,6 +1599,15 @@ footer {
 /* For small devices */
 
 @media screen and (max-width: 350px) {
+    .noscript__alert {
+        margin-top: 3rem;
+    }
+    .noscript__alert-icon {
+        font-size: 1.5rem;
+    }
+    .noscript__alert-message {
+        font-size: .625rem;
+    }
     .container {
         margin: 0 1rem;
     }
@@ -1640,6 +1641,9 @@ footer {
 /* For medium devices */
 
 @media screen and (min-width: 568px) {
+    .noscript__alert-message {
+        font-size: var(--small);
+    }
     .home-content {
         -ms-grid-columns: -webkit-max-content 1fr 1fr;
         -ms-grid-columns: max-content 1fr 1fr;
@@ -1705,21 +1709,13 @@ footer {
 /* TABLETS */
 
 @media screen and (min-width:804px) {
-    noscript {
-        padding-top: 10vw;
+    .noscript__alert {
+        top: 10%;
     }
-    .noscript-container .btn {
-        font-size: var(--normal);
+    .noscript__alert-icon {
+        font-size: 2rem;
     }
-    .noscript-container .btn .uil-redo {
-        font-size: var(--h3);
-        padding: .05rem 0.15rem 0;
-    }
-    .noscript-container .btn .uil-arrow-right {
-        font-size: var(--h2);
-        padding: 0 .05rem;
-    }
-    .noscript-subtext {
+    .noscript__alert-message {
         font-size: var(--small);
     }
     .container {
@@ -1844,6 +1840,12 @@ footer {
 /* For large devices */
 
 @media screen and (min-width: 1024px) {
+    .noscript__alert {
+        top: 10%;
+    }
+    .noscript__alert-message {
+        font-size: var(--normal);
+    }
     .main-header,
     .main,
     .footer-container {
@@ -1887,9 +1889,6 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
-    noscript {
-        padding-top: 10vh;
-    }
     .section-title {
         font-size: var(--large);
     }
@@ -1958,6 +1957,12 @@ footer {
     }
     .thankyou-header {
         padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .noscript__alert {
+        top: 5%;
     }
 }
 
