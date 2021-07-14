@@ -118,20 +118,28 @@ body.dark-mode {
 
 .noscript__alert {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: var(--body-color);
     padding: 0rem 2rem;
     max-width: 80%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     min-width: 320px;
     top: 15%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border-radius: .5rem;
     opacity: 0;
     border-left: 10px solid var(--first-color-second);
-    box-shadow: 2px 2px 5px 2px var(--first-color-second);
-    animation: showAlert ease forwards 1.5s 1s;
+    -webkit-box-shadow: 2px 2px 5px 2px var(--first-color-second);
+            box-shadow: 2px 2px 5px 2px var(--first-color-second);
+    -webkit-animation: showAlert ease forwards 1.5s 1s;
+            animation: showAlert ease forwards 1.5s 1s;
 }
 
 .noscript__alert-icon {
@@ -144,7 +152,9 @@ body.dark-mode {
     position: absolute;
     left: 20px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .noscript__alert-message {
@@ -475,7 +485,9 @@ section {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: inline-block;
 }
 
@@ -523,7 +535,8 @@ section {
 }
 
 .preloader-animation {
-    animation: exit .4s ease-in forwards;
+    -webkit-animation: exit .4s ease-in forwards;
+            animation: exit .4s ease-in forwards;
 }
 
 #page-wrap {
@@ -755,7 +768,8 @@ nav {
 .home-title {
     font-size: var(--normal);
     opacity: 0;
-    animation: scaleIn .75s ease-out .5s forwards;
+    -webkit-animation: scaleIn .75s ease-out .5s forwards;
+            animation: scaleIn .75s ease-out .5s forwards;
 }
 
 .home-title span {
@@ -1971,23 +1985,27 @@ footer {
 
 @-webkit-keyframes showAlert {
     0% {
-        transform: translate(-50%, -150%);
+        -webkit-transform: translate(-50%, -150%);
+                transform: translate(-50%, -150%);
         opacity: 0;
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 }
 
 @keyframes showAlert {
     0% {
-        transform: translate(-50%, -150%);
+        -webkit-transform: translate(-50%, -150%);
+                transform: translate(-50%, -150%);
         opacity: 0;
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 }
 
@@ -2073,20 +2091,35 @@ footer {
     }
 }
 
-@keyframes exit {
+@-webkit-keyframes exit {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        transform: translate(-50%, -50%) scale(50);
+        -webkit-transform: translate(-50%, -50%) scale(50);
+                transform: translate(-50%, -50%) scale(50);
     }
 }
 
 @keyframes exit {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
     100% {
-        transform: translate(-50%, -50%) scale(50);
+        -webkit-transform: translate(-50%, -50%) scale(50);
+                transform: translate(-50%, -50%) scale(50);
+    }
+}
+
+@keyframes exit {
+    0% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(50);
+                transform: translate(-50%, -50%) scale(50);
     }
 }
