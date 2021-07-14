@@ -1,15 +1,15 @@
 /*==================== PRELOADER ====================*/
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.getElementById('preloader-icon').classList.add('preloader-animation')
-        setTimeout(() => {
-            document.getElementById('preloader').remove()
-            document.getElementById('page-wrap').style.display = "block"
-            document.getElementById('page-wrap').style.opacity = "1"
+// window.addEventListener("load", () => {
+//     setTimeout(() => {
+//         document.getElementById('preloader-icon').classList.add('preloader-animation')
+//         setTimeout(() => {
+//             document.getElementById('preloader').remove()
+//             document.getElementById('page-wrap').style.display = "block"
+//             document.getElementById('page-wrap').style.opacity = "1"
 
-        }, 100);
-    }, 650);
-})
+//         }, 100);
+//     }, 650);
+// })
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const nav_menu = document.getElementById('nav-menu');
@@ -116,7 +116,7 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
+/*==================== CHANGE HEADER BACKGROUND SHADOW ====================*/
 function scrollHeader() {
     const nav = document.getElementById('header');
     const limit = document.documentElement.scrollHeight - document.documentElement.clientHeight;
