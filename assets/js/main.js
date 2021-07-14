@@ -1,15 +1,14 @@
 /*==================== PRELOADER ====================*/
-// window.addEventListener("load", () => {
-//     setTimeout(() => {
-//         document.getElementById('preloader-icon').classList.add('preloader-animation')
-//         setTimeout(() => {
-//             document.getElementById('preloader').remove()
-//             document.getElementById('page-wrap').style.display = "block"
-//             document.getElementById('page-wrap').style.opacity = "1"
-
-//         }, 100);
-//     }, 650);
-// })
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById('preloader-icon').classList.add('preloader-animation')
+        setTimeout(() => {
+            document.getElementById('preloader').remove()
+            document.getElementById('page-wrap').style.display = "block"
+            document.getElementById('page-wrap').style.opacity = "1"
+        }, 100);
+    }, 650);
+})
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const nav_menu = document.getElementById('nav-menu');
@@ -118,7 +117,7 @@ window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE HEADER BACKGROUND SHADOW ====================*/
 function scrollHeader() {
-    const nav = document.getElementById('header');
+    const nav = document.getElementById('header-js');
     const limit = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
     // When the scroll is greater than 20 viewport height, add the scroll-header class to the header tag
