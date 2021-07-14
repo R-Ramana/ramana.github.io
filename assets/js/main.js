@@ -1,3 +1,16 @@
+/*==================== PRELOADER ====================*/
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById('preloader-icon').classList.add('preloader-animation')
+        setTimeout(() => {
+            document.getElementById('preloader').remove()
+            document.getElementById('page-wrap').style.display = "block"
+            document.getElementById('page-wrap').style.opacity = "1"
+
+        }, 100);
+    }, 650);
+})
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const nav_menu = document.getElementById('nav-menu');
 const nav_toggle = document.getElementById('nav-toggle');
