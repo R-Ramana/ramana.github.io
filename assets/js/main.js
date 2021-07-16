@@ -76,6 +76,13 @@ if (colorTheme == null) {
 var themeDots = document.querySelectorAll('.theme-selector')
 
 themeDots.forEach(element => {
+    element.addEventListener('keypress',
+        function() {
+            setColorTheme(this.id)
+        })
+});
+
+themeDots.forEach(element => {
     element.addEventListener('click',
         function() {
             setColorTheme(this.id)
@@ -91,16 +98,24 @@ function setColorTheme(theme) {
 
     if (theme == 'red-color') {
         redBtn.classList.add('theme-selector-active')
+        redBtn.setAttribute("aria-label", "Red theme selected")
         blueBtn.classList.remove('theme-selector-active')
         purpleBtn.classList.remove('theme-selector-active')
         yellowBtn.classList.remove('theme-selector-active')
+        blueBtn.setAttribute("aria-label", "Select for blue theme")
+        yellowBtn.setAttribute("aria-label", "Select for yellow theme")
+        purpleBtn.setAttribute("aria-label", "Select for purple theme")
         themeCSS.href = ''
     }
     if (theme == 'blue-color') {
         redBtn.classList.remove('theme-selector-active')
         blueBtn.classList.add('theme-selector-active')
+        blueBtn.setAttribute("aria-label", "Blue theme selected")
         purpleBtn.classList.remove('theme-selector-active')
         yellowBtn.classList.remove('theme-selector-active')
+        redBtn.setAttribute("aria-label", "Select for red theme")
+        yellowBtn.setAttribute("aria-label", "Select for yellow theme")
+        purpleBtn.setAttribute("aria-label", "Select for purple theme")
         themeCSS.href = 'assets/css/blue.css'
     }
     if (theme == 'yellow-color') {
@@ -108,13 +123,21 @@ function setColorTheme(theme) {
         blueBtn.classList.remove('theme-selector-active')
         purpleBtn.classList.remove('theme-selector-active')
         yellowBtn.classList.add('theme-selector-active')
+        yellowBtn.setAttribute("aria-label", "Yellow theme selected")
+        blueBtn.setAttribute("aria-label", "Select for blue theme")
+        redBtn.setAttribute("aria-label", "Select for red theme")
+        purpleBtn.setAttribute("aria-label", "Select for purple theme")
         themeCSS.href = 'assets/css/yellow.css'
     }
     if (theme == 'purple-color') {
         redBtn.classList.remove('theme-selector-active')
         blueBtn.classList.remove('theme-selector-active')
         purpleBtn.classList.add('theme-selector-active')
+        purpleBtn.setAttribute("aria-label", "Purple theme selected")
         yellowBtn.classList.remove('theme-selector-active')
+        blueBtn.setAttribute("aria-label", "Select for blue theme")
+        yellowBtn.setAttribute("aria-label", "Select for yellow theme")
+        redBtn.setAttribute("aria-label", "Select for red theme")
         themeCSS.href = 'assets/css/purple.css'
     }
 
