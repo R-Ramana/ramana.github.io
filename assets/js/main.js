@@ -64,6 +64,63 @@ checkbox.addEventListener('change', () => {
     }
 });
 
+/*==================== SET COLOR THEME ====================*/
+var colorTheme = localStorage.getItem('color-theme')
+
+if (colorTheme == null) {
+    setColorTheme('red-color')
+} else {
+    setColorTheme(colorTheme)
+}
+
+var themeDots = document.querySelectorAll('.theme-selector')
+
+themeDots.forEach(element => {
+    element.addEventListener('click',
+        function() {
+            setColorTheme(this.id)
+        })
+});
+
+function setColorTheme(theme) {
+    const themeCSS = document.getElementById('theme-color')
+    const redBtn = document.getElementById('red-color')
+    const blueBtn = document.getElementById('blue-color')
+    const yellowBtn = document.getElementById('yellow-color')
+    const purpleBtn = document.getElementById('purple-color')
+
+    if (theme == 'red-color') {
+        redBtn.classList.add('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = ''
+    }
+    if (theme == 'blue-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.add('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = 'assets/css/blue.css'
+    }
+    if (theme == 'yellow-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.add('theme-selector-active')
+        themeCSS.href = 'assets/css/yellow.css'
+    }
+    if (theme == 'purple-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.add('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = 'assets/css/purple.css'
+    }
+
+    localStorage.setItem('color-theme', theme)
+}
+
 /*==================== TECHNICAL EXPERTISE ACCESSIBILITY  ====================*/
 function changeARIA() {
     var hwCheckbox = document.getElementById('hw')

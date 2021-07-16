@@ -17,13 +17,14 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 
     <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="" id="theme-color">
 
     <title>Ramana | Portfolio</title>
 </head>
@@ -32,9 +33,9 @@
     <noscript>
         <div class="noscript__alert">
             <div class="noscript__alert-icon"><i class="uil uil-exclamation-circle"></i></div>
-            <div class="noscript__alert-message">Page cannot load as JavaScript is not enabled. Click 
-                <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener">here</a> to learn how to enable JavaScript. Else click 
-                <a href="site/index-light.html" rel="noopener">here</a> to load an alternative site that does not make use of JavaScript. For the best experience, JavaScript is recommended.
+            <div class="noscript__alert-message">Page cannot load. JavaScript is not enabled. Please enable or click 
+                <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener">here</a> to learn how to enable JavaScript. Otherwise, click 
+                <a href="site/index-light.html" rel="noopener">here</a> to load a site that does not require JavaScript. For the best experience, JavaScript is recommended.
             </div>
         </div>
     </noscript>
@@ -125,6 +126,12 @@
                             <a href="#contact" class="btn btn-flex">
                                 Contact Me! <i class="uil uil-message btn-icon"></i>
                             </a>
+                            <div id="theme-color-container">
+                                <div id="red-color" class="theme-selector theme-selector-active"></div>
+                                <div id="blue-color" class="theme-selector"></div>
+                                <div id="yellow-color" class="theme-selector"></div>
+                                <div id="purple-color" class="theme-selector"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -535,7 +542,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
     <!--==================== IOS SMOOTH SCROLL ====================-->
-    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <!-- <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
 </body>
