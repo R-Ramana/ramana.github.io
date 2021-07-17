@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
             document.getElementById('page-wrap').style.display = "block"
             document.getElementById('page-wrap').style.opacity = "1"
         }, 100);
-    }, 650);
+    }, 850);
 })
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
@@ -76,9 +76,11 @@ if (colorTheme == null) {
 var themeDots = document.querySelectorAll('.theme-selector')
 
 themeDots.forEach(element => {
-    element.addEventListener('keypress',
-        function() {
-            setColorTheme(this.id)
+    element.addEventListener('keyup',
+        function(event) {
+            if (event.keyCode == 32 || event.keyCode == 13) {
+                setColorTheme(this.id)
+            }
         })
 });
 
@@ -88,6 +90,64 @@ themeDots.forEach(element => {
             setColorTheme(this.id)
         })
 });
+
+themeDots.forEach(element => {
+    element.addEventListener('mouseenter',
+        function() {
+            previewColorTheme(this.id)
+        })
+});
+
+themeDots.forEach(element => {
+    element.addEventListener('mouseleave',
+        function() {
+            resetColorTheme()
+        })
+});
+
+function resetColorTheme() {
+    const preHoverTheme = localStorage.getItem('pre-hover-color')
+    setColorTheme(preHoverTheme)
+}
+
+function previewColorTheme(theme) {
+    const themeCSS = document.getElementById('theme-color')
+    const redBtn = document.getElementById('red-color')
+    const blueBtn = document.getElementById('blue-color')
+    const yellowBtn = document.getElementById('yellow-color')
+    const purpleBtn = document.getElementById('purple-color')
+
+    localStorage.setItem('pre-hover-color', localStorage.getItem('color-theme'))
+
+    if (theme == 'red-color') {
+        redBtn.classList.add('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = ''
+    }
+    if (theme == 'blue-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.add('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = 'assets/css/blue.css'
+    }
+    if (theme == 'yellow-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.remove('theme-selector-active')
+        yellowBtn.classList.add('theme-selector-active')
+        themeCSS.href = 'assets/css/yellow.css'
+    }
+    if (theme == 'purple-color') {
+        redBtn.classList.remove('theme-selector-active')
+        blueBtn.classList.remove('theme-selector-active')
+        purpleBtn.classList.add('theme-selector-active')
+        yellowBtn.classList.remove('theme-selector-active')
+        themeCSS.href = 'assets/css/purple.css'
+    }
+}
 
 function setColorTheme(theme) {
     const themeCSS = document.getElementById('theme-color')
@@ -141,6 +201,7 @@ function setColorTheme(theme) {
         themeCSS.href = 'assets/css/purple.css'
     }
 
+    localStorage.setItem('pre-hover-color', theme)
     localStorage.setItem('color-theme', theme)
 }
 
