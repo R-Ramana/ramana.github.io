@@ -36,6 +36,7 @@ if (nav_close) {
 
 nav_link.forEach(n => n.addEventListener('click', remove));
 
+
 /*==================== TOGGLE DARK / LIGHT THEME ====================*/
 var currentTheme = localStorage.getItem('selected-theme');
 var checkbox = document.getElementById('dark-mode-toggle')
@@ -76,30 +77,36 @@ if (colorTheme == null) {
 var themeDots = document.querySelectorAll('.theme-selector')
 
 themeDots.forEach(element => {
+    element.addEventListener('click',
+        function() {
+            setColorTheme(this.id)
+        })
+
     element.addEventListener('keyup',
         function(event) {
             if (event.keyCode == 32 || event.keyCode == 13) {
                 setColorTheme(this.id)
             }
         })
-});
 
-themeDots.forEach(element => {
-    element.addEventListener('click',
-        function() {
-            setColorTheme(this.id)
-        })
-});
-
-themeDots.forEach(element => {
+    // On mouse hover / keyboard focus
     element.addEventListener('mouseenter',
         function() {
             previewColorTheme(this.id)
         })
-});
 
-themeDots.forEach(element => {
+    element.addEventListener('focus',
+        function() {
+            previewColorTheme(this.id)
+        })
+
+    // On leaving hover / keyboard focus
     element.addEventListener('mouseleave',
+        function() {
+            resetColorTheme()
+        })
+
+    element.addEventListener('blur',
         function() {
             resetColorTheme()
         })
@@ -156,49 +163,31 @@ function setColorTheme(theme) {
     const yellowBtn = document.getElementById('yellow-color')
     const purpleBtn = document.getElementById('purple-color')
 
+    previewColorTheme(theme);
+
     if (theme == 'red-color') {
-        redBtn.classList.add('theme-selector-active')
         redBtn.setAttribute("aria-label", "Red theme selected")
-        blueBtn.classList.remove('theme-selector-active')
-        purpleBtn.classList.remove('theme-selector-active')
-        yellowBtn.classList.remove('theme-selector-active')
         blueBtn.setAttribute("aria-label", "Select for blue theme")
         yellowBtn.setAttribute("aria-label", "Select for yellow theme")
         purpleBtn.setAttribute("aria-label", "Select for purple theme")
-        themeCSS.href = ''
     }
     if (theme == 'blue-color') {
-        redBtn.classList.remove('theme-selector-active')
-        blueBtn.classList.add('theme-selector-active')
         blueBtn.setAttribute("aria-label", "Blue theme selected")
-        purpleBtn.classList.remove('theme-selector-active')
-        yellowBtn.classList.remove('theme-selector-active')
         redBtn.setAttribute("aria-label", "Select for red theme")
         yellowBtn.setAttribute("aria-label", "Select for yellow theme")
         purpleBtn.setAttribute("aria-label", "Select for purple theme")
-        themeCSS.href = 'assets/css/blue.css'
     }
     if (theme == 'yellow-color') {
-        redBtn.classList.remove('theme-selector-active')
-        blueBtn.classList.remove('theme-selector-active')
-        purpleBtn.classList.remove('theme-selector-active')
-        yellowBtn.classList.add('theme-selector-active')
         yellowBtn.setAttribute("aria-label", "Yellow theme selected")
         blueBtn.setAttribute("aria-label", "Select for blue theme")
         redBtn.setAttribute("aria-label", "Select for red theme")
         purpleBtn.setAttribute("aria-label", "Select for purple theme")
-        themeCSS.href = 'assets/css/yellow.css'
     }
     if (theme == 'purple-color') {
-        redBtn.classList.remove('theme-selector-active')
-        blueBtn.classList.remove('theme-selector-active')
-        purpleBtn.classList.add('theme-selector-active')
         purpleBtn.setAttribute("aria-label", "Purple theme selected")
-        yellowBtn.classList.remove('theme-selector-active')
         blueBtn.setAttribute("aria-label", "Select for blue theme")
         yellowBtn.setAttribute("aria-label", "Select for yellow theme")
         redBtn.setAttribute("aria-label", "Select for red theme")
-        themeCSS.href = 'assets/css/purple.css'
     }
 
     localStorage.setItem('pre-hover-color', theme)
@@ -271,8 +260,7 @@ window.addEventListener('scroll', scrollHeader);
 /*==================== SHOW BACK TO TOP ====================*/
 function back_to_top() {
     const to_top = document.getElementById('to-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if (this.scrollY >= 300) to_top.classList.add('to-top-btn');
+    if (this.scrollY >= 1) to_top.classList.add('to-top-btn');
     else to_top.classList.remove('to-top-btn')
 }
 window.addEventListener('scroll', back_to_top);
