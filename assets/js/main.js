@@ -210,6 +210,8 @@ function changeARIA() {
 /*==================== PORTFOLIO SWIPER  ====================*/
 /*  Initialize Swiper */
 let swiper = new Swiper('.project-container', {
+    observer: true,
+    observeParents: true,
     cssMode: true,
     loop: true,
     navigation: {
