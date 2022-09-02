@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vCard - Personal Portfolio</title>
+    <title>R Ramana | Portfolio</title>
 
     <!--
     - favicon
@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -55,7 +56,7 @@
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span>Contact Details</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -162,6 +163,22 @@
                         <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
 
+                    <!-- Dark Mode / Light Mode -->
+                    <li>
+                        <div class="nav-btn">
+
+                            <div id="toggle-container">
+                                <input type="checkbox" class="checkbox" checked="checked" id="dark-mode-toggle" tabindex="0" aria-label="Uncheck to switch to dark theme">
+                                <label for="dark-mode-toggle" class="label">
+                                    <i class="uil uil-moon theme-toggle" id="theme-toggle"></i>
+                                    <i class="uil uil-sun theme-toggle" id="main"></i>
+                                    <div class="circle-btn theme-toggle translateX" id="circle-btn"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+
+
                 </ul>
 
             </nav>
@@ -174,7 +191,7 @@
         - #ABOUT
       -->
 
-            <article class="about  active" data-page="about">
+            <article class="about active" data-page="about">
 
                 <header>
                     <h2 class="h2 article-title">About me</h2>
@@ -438,7 +455,7 @@
                         </button>
 
                         <div class="modal-img-wrapper">
-                            <img src="./assets/images/icon-quote.svg" alt="quote icon">
+                            <img id="quote-icon" src="./assets/images/icon-quote.svg" alt="quote icon">
                         </div>
 
                         <div class="modal-content">

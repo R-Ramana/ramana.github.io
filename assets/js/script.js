@@ -1,5 +1,41 @@
 'use strict';
 
+/*==================== TOGGLE DARK / LIGHT THEME ====================*/
+var currentTheme = localStorage.getItem('selected-theme');
+var checkbox = document.getElementById('dark-mode-toggle')
+var quoteIcon = document.getElementById('quote-icon')
+
+// Get User Preference
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode')
+        // quoteIcon.setAttribute("src", "./assets/images/icon-quote.svg")
+    checkbox.checked = false
+    checkbox.setAttribute("aria-label", "Check to switch to light theme")
+} else {
+    document.body.classList.remove('dark-mode')
+        // quoteIcon.setAttribute("src", "./assets/images/icon-quote-dark.PNG")
+    checkbox.checked = true
+    checkbox.setAttribute("aria-label", "Uncheck to switch to dark theme")
+
+}
+
+// Store User Preference in Local Storage
+checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+        document.body.classList.remove('dark-mode')
+            // quoteIcon.setAttribute("src", "./assets/images/icon-quote-dark.png")
+        console.log(quoteIcon.src);
+        localStorage.setItem('selected-theme', 'light')
+        checkbox.setAttribute("aria-label", "Uncheck to switch to dark theme")
+    } else {
+        document.body.classList.add('dark-mode')
+            // quoteIcon.setAttribute("src", "./assets/images/icon-quote.svg")
+        localStorage.setItem('selected-theme', 'dark')
+        checkbox.setAttribute("aria-label", "Check to switch to light theme")
+    }
+});
+
+
 
 
 // element toggle function
@@ -168,6 +204,20 @@ for (let i = 0; i < filterBtn.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+var currentPage = localStorage.getItem('current-page');
+
+if (currentPage != null) {
+    for (let i = 0; i < pages.length; i++) {
+        if (pages[i].dataset.page === pages[currentPage].dataset.page) {
+            pages[i].classList.add("active");
+            navigationLinks[i].classList.add("active");
+            window.scrollTo(0, 0);
+        } else {
+            pages[i].classList.remove("active");
+            navigationLinks[i].classList.remove("active");
+        }
+    }
+}
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -178,6 +228,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
                 pages[i].classList.add("active");
                 navigationLinks[i].classList.add("active");
                 window.scrollTo(0, 0);
+                var currentPageNumber = i.toString()
+                localStorage.setItem("current-page", currentPageNumber)
             } else {
                 pages[i].classList.remove("active");
                 navigationLinks[i].classList.remove("active");
