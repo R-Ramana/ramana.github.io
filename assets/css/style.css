@@ -366,7 +366,7 @@ main {
     border-radius: 8px;
 }
 
-.info_more-btn {
+.more_info-btn {
     position: absolute;
     top: -15px;
     right: -15px;
@@ -380,7 +380,7 @@ main {
     z-index: 1;
 }
 
-.info_more-btn::before {
+.more_info-btn::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -390,27 +390,27 @@ main {
     z-index: -1;
 }
 
-.info_more-btn:hover,
-.info_more-btn:focus {
+.more_info-btn:hover,
+.more_info-btn:focus {
     background: var(--bg-gradient-btn-1);
 }
 
-.info_more-btn:hover::before,
-.info_more-btn:focus::before {
+.more_info-btn:hover::before,
+.more_info-btn:focus::before {
     background: var(--bg-gradient-btn-2);
 }
 
-.info_more-btn span {
+.more_info-btn span {
     display: none;
 }
 
-.sidebar-info_more {
+.sidebar-more_info {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-2);
 }
 
-.sidebar.active .sidebar-info_more {
+.sidebar.active .sidebar-more_info {
     opacity: 1;
     visibility: visible;
 }
@@ -508,18 +508,18 @@ main {
     position: absolute;
 }
 
-.checkbox:focus-visible+.label {
+.checkbox:focus-visible+.theme_toggle-label {
     outline: 2px solid white;
     border-radius: 1rem;
 }
 
-.checkbox:checked+.label .circle-btn {
+.checkbox:checked+.theme_toggle-label .circle-btn {
     -webkit-transform: translateX(-24px);
     -ms-transform: translateX(-24px);
     transform: translateX(-24px);
 }
 
-.label {
+.theme_toggle-label {
     background-color: var(--content-bg-4);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -543,7 +543,7 @@ main {
 }
 
 
-/* .label i {
+/* .theme_toggle-label i {
     margin: 0 5px;
 } */
 
@@ -595,24 +595,24 @@ main {
 
 
 /**
- * #service 
+ * #expertise 
  */
 
-.service {
+.expertise {
     margin-bottom: 35px;
 }
 
-.service-title {
+.expertise-title {
     margin-bottom: 20px;
 }
 
-.service-list {
+.expertise-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-.service-item {
+.expertise-item {
     position: relative;
     background: var(--border-gradient-onyx);
     padding: 20px;
@@ -621,7 +621,7 @@ main {
     z-index: 1;
 }
 
-.service-item::before {
+.expertise-item::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -630,25 +630,25 @@ main {
     z-index: -1;
 }
 
-.service-icon-box {
+.expertise-icon-box {
     margin-bottom: 10px;
 }
 
-.service-icon-box i {
+.expertise-icon-box i {
     margin: auto;
     color: var(--main-accent);
     font-size: var(--fs-1);
 }
 
-.service-content-box {
+.expertise-content-box {
     text-align: center;
 }
 
-.service-item-title {
+.expertise-item-title {
     margin-bottom: 7px;
 }
 
-.service-item-text {
+.expertise-item-text {
     color: var(--main-text);
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
@@ -1474,16 +1474,16 @@ textarea.form-input::-webkit-resizer {
     .info-content .title {
         padding: 5px 18px;
     }
-    .info_more-btn {
+    .more_info-btn {
         top: -30px;
         right: -30px;
         padding: 10px 15px;
     }
-    .info_more-btn span {
+    .more_info-btn span {
         display: block;
         font-size: var(--fs-8);
     }
-    .info_more-btn ion-icon {
+    .more_info-btn ion-icon {
         display: none;
     }
     .separator {
@@ -1517,19 +1517,19 @@ textarea.form-input::-webkit-resizer {
     .about-text {
         margin-bottom: 40px;
     }
-    /* service */
-    .service-item {
+    /* expertise */
+    .expertise-item {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 18px;
         padding: 30px;
     }
-    .service-icon-box {
+    .expertise-icon-box {
         margin-bottom: 0;
         margin-top: 5px;
     }
-    .service-content-box {
+    .expertise-content-box {
         text-align: left;
     }
     /* testimonials */
@@ -1783,8 +1783,8 @@ textarea.form-input::-webkit-resizer {
     /**
    * ABOUT
    */
-    /* service */
-    .service-list {
+    /* expertise */
+    .expertise-list {
         grid-template-columns: 1fr 1fr;
         gap: 20px 25px;
     }
@@ -1888,10 +1888,10 @@ textarea.form-input::-webkit-resizer {
     .info-content .title {
         margin: auto;
     }
-    .info_more-btn {
+    .more_info-btn {
         display: none;
     }
-    .sidebar-info_more {
+    .sidebar-more_info {
         opacity: 1;
         visibility: visible;
     }
