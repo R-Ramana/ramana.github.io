@@ -664,24 +664,24 @@ margin: 0 5px;
 
 
 /**
-* #service 
+* #expertise 
 */
 
-.service {
+.expertise {
     margin-bottom: 35px;
 }
 
-.service-title {
+.expertise-title {
     margin-bottom: 20px;
 }
 
-.service-list {
+.expertise-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-.service-item {
+.expertise-item {
     position: relative;
     background: var(--border-gradient-onyx);
     padding: 20px;
@@ -690,7 +690,7 @@ margin: 0 5px;
     z-index: 1;
 }
 
-.service-item::before {
+.expertise-item::before {
     content: "";
     position: absolute;
     inset: 1px;
@@ -699,25 +699,25 @@ margin: 0 5px;
     z-index: -1;
 }
 
-.service-icon-box {
+.expertise-icon-box {
     margin-bottom: 10px;
 }
 
-.service-icon-box i {
+.expertise-icon-box i {
     margin: auto;
     color: var(--main-accent);
     font-size: var(--fs-1);
 }
 
-.service-content-box {
+.expertise-content-box {
     text-align: center;
 }
 
-.service-item-title {
+.expertise-item-title {
     margin-bottom: 7px;
 }
 
-.service-item-text {
+.expertise-item-text {
     color: var(--main-text);
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
@@ -1067,6 +1067,12 @@ margin: 0 5px;
 .timeline-work-date {
     margin-bottom: 15px;
 }
+
+
+/* li.testing {
+    list-style: circle;
+    color: aliceblue;
+} */
 
 
 /*-----------------------------------*\
@@ -1586,19 +1592,19 @@ textarea.form-input::-webkit-resizer {
     .about-text {
         margin-bottom: 40px;
     }
-    /* service */
-    .service-item {
+    /* expertise */
+    .expertise-item {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 18px;
         padding: 30px;
     }
-    .service-icon-box {
+    .expertise-icon-box {
         margin-bottom: 0;
         margin-top: 5px;
     }
-    .service-content-box {
+    .expertise-content-box {
         text-align: left;
     }
     /* testimonials */
@@ -1852,8 +1858,8 @@ textarea.form-input::-webkit-resizer {
     /**
 * ABOUT
 */
-    /* service */
-    .service-list {
+    /* expertise */
+    .expertise-list {
         grid-template-columns: 1fr 1fr;
         gap: 20px 25px;
     }
