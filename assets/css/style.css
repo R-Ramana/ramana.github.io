@@ -1138,7 +1138,8 @@ margin: 0 5px;
 }
 
 .select-item button:hover {
-    --content-bg-4: hsl(240, 2%, 20%);
+    background-color: var(--border-color);
+    color: var(--content-bg-4);
 }
 
 .project-list {
