@@ -1,9 +1,10 @@
 'use strict';
 
-/*==================== TOGGLE DARK / LIGHT THEME ====================*/
-var currentTheme = localStorage.getItem('selected-theme');
+/*==================== TOGGLE DARK / LIGHT / COLOR THEMES ====================*/
+var currentTheme = localStorage.getItem('selected-theme')
 var checkbox = document.getElementById('dark-mode-toggle')
 var quoteIcon = document.getElementById('quote-icon')
+var colors = document.querySelectorAll('[name = "color"]')
 
 // Get User Preference
 if (currentTheme === 'dark') {
@@ -16,8 +17,19 @@ if (currentTheme === 'dark') {
         // quoteIcon.setAttribute("src", "./assets/images/icon-quote-dark.PNG")
     checkbox.checked = true
     checkbox.setAttribute("aria-label", "Uncheck to switch to dark theme")
-
 }
+
+const getColor = function() {
+    const activeColor = localStorage.getItem("color")
+    colors.forEach((colorOption) => {
+            if (colorOption.id === activeColor) {
+                colorOption.checked = true
+            }
+        })
+        //no :has() support fallback
+    document.documentElement.className = activeColor
+}
+
 
 // Store User Preference in Local Storage
 checkbox.addEventListener('change', () => {
@@ -35,8 +47,17 @@ checkbox.addEventListener('change', () => {
     }
 });
 
+const storeColor = function(color) {
+    localStorage.setItem("color", color)
+}
 
+colors.forEach(colorOption => {
+    colorOption.addEventListener('click', () => {
+        storeColor(colorOption.id)
+    })
+})
 
+document.onload = getColor()
 
 // element toggle function
 const elementToggleFunc = function(elem) { elem.classList.toggle("active"); }
@@ -205,6 +226,34 @@ for (let i = 0; i < filterBtn.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 var currentPage = localStorage.getItem('current-page');
+
+var id = window.location.href.indexOf("#")
+var substring = ""
+
+if (id > -1) {
+    substring = window.location.href.substring(id + 1);
+    console.log(substring)
+    switch (substring) {
+        case "about":
+            currentPage = 0
+            break
+        case "experience":
+            currentPage = 1
+            break
+        case "projects":
+            currentPage = 2
+            break
+        case "articles":
+            currentPage = 3
+            break
+        case "contact":
+            currentPage = 4
+            break
+        default:
+            currentPage = 0
+            break
+    }
+}
 
 if (currentPage != null) {
     for (let i = 0; i < pages.length; i++) {
