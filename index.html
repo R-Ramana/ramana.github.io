@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <!-- <form action="" class="color-picker">
+    <form action="" class="color-picker">
         <fieldset>
             <legend class="visually-hidden">Pick a color!</legend>
             <label class="visually-hidden" for="color1">Color 1</label>
@@ -38,7 +38,7 @@
             <label class="visually-hidden" for="color5">Color 5</label>
             <input type="radio" name="color" id="color5" checked>
         </fieldset>
-    </form> -->
+    </form>
 
     <!--- #MAIN -->
 
@@ -707,6 +707,9 @@
                         <li class="filter-item">
                             <button data-filter-btn>Web Development</button>
                         </li>
+                        <li class="filter-item">
+                            <button data-filter-btn>Internet of Things (IoT)</button>
+                        </li>
 
                     </ul>
 
@@ -748,11 +751,35 @@
                                 <button data-select-item>Web Development</button>
                             </li>
 
+                            <li class="select-item">
+                                <button data-select-item>Internet of Things (IoT)</button>
+                            </li>
+
                         </ul>
 
                     </div>
 
                     <ul class="project-list">
+
+                        <li class="project-item active" data-filter-item data-category="internet of things (iot) software engineering machine learning hardware development web development" data-project-item>
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <i class="lni lni-eye"></i>
+                                </div>
+
+                                <img src="./assets/images/knewbie.png" data-project-img alt="Screenshot of BeyondVision Project" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title" data-project-title>BeyondVision</h3>
+                            <p class="project-category" data-project-category>Python | C | MQTT | Jupyter Notebook | Pandas | Flask | HTML </p>
+                            <p class="project-description" data-project-text>BeyondVision is a proof of concept/prototype of a smart walking cane to assist the visually impaired. The walking cane sounds off when an individual is too close to other people/objects, detects fires nearby or detects when
+                                the user falls (using an IMU sensor and ML algorithm). Subsequently the location detail is sent to the next-of-kin alongside the situation (fall/panic button pressed/fire) via a telegram message.
+                                <a href="assets/docs/BeyondVision Technical Deck.pptx" target="_blank">A high level technical overview can be found here.</a>
+                                <br><br>
+                                <a href="https://github.com/Orbital-Knewbie/Knewbie" target="_blank"> View GitHub Repo <i class="lni lni-chevron-right modal-icon"></i></a><br><br>
+                            </p>
+                        </li>
 
                         <li class="project-item active" data-filter-item data-category="web development software engineering machine learning" data-project-item>
 
