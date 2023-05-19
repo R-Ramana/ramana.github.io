@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -47,103 +47,76 @@
         <!--- #SIDEBAR -->
 
         <aside class="sidebar" data-sidebar>
-
             <div class="sidebar-info">
-
                 <figure class="avatar-box">
                     <img src="./assets/images/r-ramana.png" alt="R Ramana" width="80">
                 </figure>
 
-                <div class="info-content">
+                <div class="social-social-info">
                     <h1 class="name" title="R Ramana">R Ramana</h1>
 
                     <p class="title">Computer Engineer</p>
                 </div>
 
                 <button class="more_info-btn" data-sidebar-btn>
-          <span class="name">Contact Details</span>
-
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </button>
-
+                    <span class="name">Contact Details</span>
+                    <i class="lni lni-chevron-down"></i>
+                </button>
             </div>
 
             <div class="sidebar-more_info">
-
                 <div class="separator"></div>
 
-                <ul class="contacts-list">
-
-                    <li class="contact-item">
+                <ul class="socials-list">
+                    <li class="social-item">
                         <a href="mailto:ramanalfc@yahoo.com.sg">
                             <div class="icon-box">
                                 <i class="lni lni-envelope"></i>
                             </div>
                         </a>
                         <a href="mailto:ramanalfc@yahoo.com.sg">
-                            <div class="contact-info">
-
-                                <p class="contact-title">Email</p>
-
+                            <div class="social-info">
+                                <p class="social-title">Email</p>
                             </div>
                         </a>
 
                     </li>
-                    <li class="contact-item">
+                    <li class="social-item">
                         <a href="https://github.com/R-Ramana" target="_blank">
                             <div class="icon-box">
                                 <i class="lni lni-github"></i>
                             </div>
                         </a>
                         <a href="https://github.com/R-Ramana" target="_blank">
-                            <div class="contact-info">
-
-                                <p class="contact-title">GitHub</p>
-
+                            <div class="social-info">
+                                <p class="social-title">GitHub</p>
                             </div>
                         </a>
 
                     </li>
-                    <li class="contact-item">
+                    <li class="social-item">
                         <a href="https://www.linkedin.com/in/ramana-r/" target="_blank">
                             <div class="icon-box">
                                 <i class="lni lni-linkedin"></i>
                             </div>
                         </a>
                         <a href="https://www.linkedin.com/in/ramana-r/" target="_blank">
-                            <div class="contact-info">
-
-                                <p class="contact-title">LinkedIn</p>
-
+                            <div class="social-info">
+                                <p class="social-title">LinkedIn</p>
                             </div>
                         </a>
-
                     </li>
-
-
-
                 </ul>
-
                 <div class="separator"></div>
-
             </div>
-
         </aside>
 
-
-
-
-
-        <!--- #main-content -->
-
+        <!--- ############################# MAIN CONTENT ################################# ---------->
         <div class="main-content">
 
-            <!--- #NAVBAR -->
-
+            <!--- ############################# NAV BAR ################################# ---------->
             <nav class="navbar">
-
                 <ul class="navbar-list">
-
                     <li class="navbar-item">
                         <button class="navbar-link  active" data-nav-link>About</button>
                     </li>
@@ -155,19 +128,16 @@
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Projects</button>
                     </li>
-
-                    <li class="navbar-item">
+                    <!-- <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Articles</button>
-                    </li>
-
+                    </li> -->
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
 
-                    <!-- Dark Mode / Light Mode -->
+                    <!--- ############################# DARK/LIGHT MODE TOGGLE ################################# ---------->
                     <li>
                         <div class="nav-btn">
-
                             <div id="toggle-container">
                                 <input type="checkbox" class="checkbox" checked="checked" id="dark-mode-toggle" tabindex="0" aria-label="Uncheck to switch to dark theme">
                                 <label for="dark-mode-toggle" class="theme_toggle-label">
@@ -178,22 +148,13 @@
                             </div>
                         </div>
                     </li>
-
-
                 </ul>
-
             </nav>
 
-
-
-
-
-            <!--- #ABOUT -->
-
+            <!--- ############################# ABOUT ################################# ---------->
             <article class="about active" data-page="about">
-
                 <header>
-                    <h2 class="h2 article-title">About me</h2>
+                    <h2 class="h2 section-title">About me</h2>
                 </header>
 
                 <section class="about-text">
@@ -208,7 +169,7 @@
                     </p>
                 </section>
 
-                <!-- EDUCATION -->
+                <!--- ############################# EDUCATION ################################# ---------->
 
                 <section class="timeline">
 
@@ -282,14 +243,12 @@
 
                 </section>
 
-                <!--- CERTIFICATIONS -->
+                <!--- ############################# CERTIFICATIONS ################################# ---------->
 
                 <section class="certification">
-
                     <h3 class="h3 certification-title">certification</h3>
 
                     <ul class="certification-list has-scrollbar">
-
                         <li class="certification-item">
                             <a href="assets/docs/Android_ATC.pdf" target="_blank">
                                 <img src="./assets/images/Android_ATC.png" alt="Android ATC Logo ">
@@ -297,15 +256,12 @@
                             </a>
                         </li>
 
-
                         <li class="certification-item">
                             <a href="https://www.udemy.com/certificate/UC-dda29871-6252-4d50-9bd2-07ad18641abc/">
                                 <img src="./assets/images/Udemy.png" alt="Udemy Logo">
                                 <p class="certification-description">UX Research & UI Design</p>
                             </a>
                         </li>
-
-
 
                         <li class="certification-item">
                             <a href="https://www.udemy.com/certificate/UC-93b4f08a-91d1-4680-982f-26bec993eb08/">
@@ -320,22 +276,18 @@
                                 <p class="certification-description">SEO Strategy</p>
                             </a>
                         </li>
-
                     </ul>
-
                 </section>
 
-
-                <!--- testimonials -->
+                <!--- ############################# TESTIMONIALS ################################# ---------->
 
                 <!-- <section class="testimonials">
-
                     <h3 class="h3 testimonials-title">Testimonials</h3>
 
                     <ul class="testimonials-list has-scrollbar">
 
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
+                            <div class="testimonial-card" data-testimonials-item>
 
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Joseph Lee</h4>
                                 <h5 class="h5 testimonials-item-subtitle" data-testimonials-subtitle>Manager, Government Data Office</h5>
@@ -360,7 +312,7 @@
                         </li>
 
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
+                            <div class="testimonial-card" data-testimonials-item>
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Zachary Yong Zihui</h4>
                                 <h5 class="h5 testimonials-item-subtitle" data-testimonials-subtitle>Medical Officer IC, Khatib Medical Centre</h5>
                                 <time class="testimonials-item-date" datetime="2020-08-23" data-testimonials-date>23 August, 2020</time>
@@ -386,7 +338,7 @@
                         </li>
 
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
+                            <div class="testimonial-card" data-testimonials-item>
 
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Robin Loh</h4>
                                 <h5 class="h5 testimonials-item-subtitle" data-testimonials-subtitle>Mentor, NUS Orbital</h5>
@@ -411,7 +363,7 @@
                         </li>
 
                         <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
+                            <div class="testimonial-card" data-testimonials-item>
 
                                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr. Charles M Burke</h4>
                                 <h5 class="h5 testimonials-item-subtitle" data-testimonials-subtitle>Lecturer, NUS</h5>
@@ -440,9 +392,9 @@
                 </section> -->
 
 
-                <!--- testimonials modal -->
+                <!--------------------- Testimonial Modal -------------------------->
 
-                <div class="modal-container" data-modal-container>
+                <!-- <div class="modal-container" data-modal-container>
 
                     <div class="overlay" data-overlay></div>
 
@@ -475,23 +427,16 @@
 
                     </section>
 
-                </div>
+                </div> -->
 
             </article>
 
-
-
-
-
-            <!--- #EXPERIENCE -->
+            <!--- ############################# EXPERIENCE ################################# ---------->
 
             <article class="experience" data-page="experience">
-
                 <header>
-                    <h2 class="h2 article-title">Experience</h2>
+                    <h2 class="h2 section-title">Experience</h2>
                 </header>
-
-
 
                 <section class="timeline">
 
@@ -528,7 +473,6 @@
                                 1. In charge of maintaining the company website <br>2. In charge of revamping and maintaining event websites<br>3. Consulted on digital transformation to internal processes (e.g. automating repetitive tasks; single source
                                 of truth database)
                             </p>
-
                         </li>
 
                         <li class="timeline-item">
@@ -542,7 +486,6 @@
                                 1. Focused on digital transformation from a project management perspective & automated internal processes<br>2. Created several templates to simplify Request for Proposal (RfP) and tender processes (including a metric for
                                 evaluation of vendors)
                             </p>
-
                         </li>
 
                         <li class="timeline-item">
@@ -555,7 +498,6 @@
                                 1. Revamped and reorganized an internal Data Management Portal, to provide updated resources to the Government’s data community, such as the Chief Data Officers of each Government agency<br>2. Performed data analysis with
                                 regard to some COVID-19 operations
                             </p>
-
                         </li>
 
                         <li class="timeline-item">
@@ -567,26 +509,16 @@
                             <p class="timeline-text timeline-work-text">
                                 1. Use of Machine Learning (ML) to validate demand & supply forecasting for dynamic resource planning.
                             </p>
-                            <!-- <li class="testing">Test</li>
-                            <li class="testing">Test</li>
-                            <li class="testing">Test</li> -->
-
                         </li>
-
                     </ol>
-
                 </section>
 
-                <!--- #EXPERTISE -->
-
+                <!--- ############################# EXPERTISE ################################# ---------->
                 <section class="expertise">
-
                     <h3 class="h3 expertise-title">Technical Expertise</h3>
 
                     <ul class="expertise-list">
-
                         <li class="expertise-item">
-
                             <div class="expertise-icon-box">
                                 <i class="lni lni-code" width="40"></i>
                             </div>
@@ -600,11 +532,9 @@
                                     <br> Javascript
                                 </p>
                             </div>
-
                         </li>
 
                         <li class="expertise-item">
-
                             <div class="expertise-icon-box">
                                 <i class="lni lni-cloud-network"></i>
                             </div>
@@ -617,20 +547,15 @@
                                     <br> GitHub
                                 </p>
                             </div>
-
                         </li>
 
-
-
                         <li class="expertise-item">
-
                             <div class="expertise-icon-box">
                                 <i class="lni lni-website"></i>
                             </div>
 
                             <div class="expertise-content-box">
                                 <h4 class="h4 expertise-item-title">Web Development</h4>
-
                                 <p class="expertise-item-text">
                                     HTML<br> CSS
                                     <br> Flask (Python)
@@ -638,21 +563,17 @@
                                     <br> WordPress
                                     <br> Figma (UI Design/Prototyping)
                                     <br> Adobe XD (UI Design/Prototyping)
-
                                 </p>
                             </div>
-
                         </li>
 
                         <li class="expertise-item">
-
                             <div class="expertise-icon-box">
                                 <i class="lni lni-laptop-phone"></i>
                             </div>
 
                             <div class="expertise-content-box">
                                 <h4 class="h4 expertise-item-title">Hardware Development</h4>
-
                                 <p class="expertise-item-text">
                                     Verilog<br> Arduino / Bluno Beetle / WeMOS
                                     <br> Raspberry Pi
@@ -661,29 +582,19 @@
                                     <br> Real-Time Operating Systems
                                 </p>
                             </div>
-
                         </li>
-
                     </ul>
-
                 </section>
-
             </article>
 
-
-
-            <!--- #PORTFOLIO -->
-
+            <!--- ############################# PORTFOLIO ################################# ---------->
             <article class="portfolio" data-page="projects">
-
                 <header>
-                    <h2 class="h2 article-title">Projects</h2>
+                    <h2 class="h2 section-title">Projects</h2>
                 </header>
 
                 <section class="projects">
-
                     <ul class="filter-list">
-
                         <li class="filter-item">
                             <button class="active" data-filter-btn>All</button>
                         </li>
@@ -710,64 +621,51 @@
                         <li class="filter-item">
                             <button data-filter-btn>Internet of Things (IoT)</button>
                         </li>
-
                     </ul>
 
-                    <div class="filter-select-box">
-
+                    <div class="filter-list-mobile">
                         <button class="filter-select" data-select>
-
-              <div class="select-value" data-select-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
+                            <span class="select-value" data-select-value>Select category</span>
+                            <i class="lni lni-chevron-down"></i>
+                        </button>
 
                         <ul class="select-list">
-
-                            <li class="select-item">
-                                <button data-select-item>All</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>All</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Robotics</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Robotics</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Hardware Development</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Hardware Development</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Software Engineering</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Software Engineering</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Machine Learning</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Machine Learning</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Web Development</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Web Development</button>
                             </li>
 
-                            <li class="select-item">
-                                <button data-select-item>Internet of Things (IoT)</button>
+                            <li class="filter-item-mobile">
+                                <button data-filter-item-mobile>Internet of Things (IoT)</button>
                             </li>
-
                         </ul>
-
                     </div>
 
                     <ul class="project-list">
-
                         <li class="project-item active" data-filter-item data-category="internet of things (iot) software engineering machine learning hardware development web development" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/knewbie.png" data-project-img alt="Screenshot of BeyondVision Project" loading="lazy">
                             </figure>
 
@@ -782,12 +680,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="web development software engineering machine learning" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/knewbie.png" data-project-img alt="Screenshot of Knewbie Project" loading="lazy">
                             </figure>
 
@@ -801,12 +697,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="hardware development" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/fpga.jpg" alt="Screenshot of FPGA Development" loading="lazy" data-project-img>
                             </figure>
 
@@ -820,12 +714,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="web development" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/success-steel.png" data-project-img alt="Screenshot of Success Steel Website" loading="lazy">
                             </figure>
 
@@ -838,12 +730,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="software engineering" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/notus.png" data-project-img alt="Screenshot of NotUS Project" loading="lazy">
                             </figure>
 
@@ -857,12 +747,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="software engineering" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/trading.jpg" data-project-img alt="Image of Financial Trading" loading="lazy">
                             </figure>
 
@@ -875,12 +763,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="software engineering hardware development robotics" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/rtos.jpg" data-project-img alt="Screenshot of RTOS Project" loading="lazy">
                             </figure>
 
@@ -894,12 +780,10 @@
                         </li>
 
                         <li class="project-item active" data-filter-item data-category="hardware development software engineering robotics" data-project-item>
-
                             <figure class="project-img">
                                 <div class="project-item-icon-box">
                                     <i class="lni lni-eye"></i>
                                 </div>
-
                                 <img src="./assets/images/Alex.jpg" data-project-img alt="Image of Alex Robot" loading="lazy">
                             </figure>
 
@@ -910,17 +794,12 @@
                                 <a href="https://github.com/R-Ramana/Alex" target="_blank"> View GitHub Repo <i class="lni lni-chevron-right modal-icon"></i></a><br><br>
                             </p>
                         </li>
-
                     </ul>
-
                 </section>
 
                 <div class="modal-container" data-modal-container-project>
-
                     <div class="overlay" data-overlay-project></div>
-
-                    <section class="testimonials-modal has-scrollbar">
-
+                    <section class="project-modal has-scrollbar">
                         <button class="modal-close-btn" data-modal-close-btn-project>
                           <i class="lni lni-close"></i>
                         </button>
@@ -934,8 +813,6 @@
 
                             <h3 class="h3 modal-title" data-modal-project-title>Daniel lewis</h3>
                             <h3 class="h4 modal-subtitle" data-modal-project-category>Lecturer, NUS</h3>
-
-
                             <!-- <time datetime="2020-08-14" data-modal-date>14 August, 2020</time> -->
 
                             <div class="modal-description" data-modal-project-text>
@@ -944,25 +821,17 @@
                                     eiusmod tempor incididunt ut laborels dolore magnarels alia.
                                 </p>
                             </div>
-
                         </div>
-
                     </section>
-
                 </div>
-
             </article>
 
+            <!--- ############################# BLOG POST ################################# ---------->
 
-
-
-
-            <!--- "article -->
-
-            <article class="articles" data-page="articles">
+            <!-- <article class="articles" data-page="articles">
 
                 <header>
-                    <h2 class="h2 article-title">Articles</h2>
+                    <h2 class="h2 section-title">Articles</h2>
                 </header>
 
                 <section class="article-posts">
@@ -1098,62 +967,39 @@
 
                 </section>
 
-            </article>
+            </article> -->
 
-
-
-
-
-            <!--- #CONTACT -->
+            <!--- ############################# CONTACT ################################# ---------->
 
             <article class="contact" data-page="contact">
-
                 <header>
-                    <h2 class="h2 article-title">Contact</h2>
+                    <h2 class="h2 section-title">Contact</h2>
                 </header>
 
                 <section class="contact-form">
-
                     <h3 class="h3 form-title">Contact Form</h3>
-
                     <form action="https://formsubmit.co/963aca097a2bb92ad142914cad5d3af8" method="POST" class="form" data-form>
-
                         <div class="input-wrapper">
                             <input type="text" name="fullname" class="form-input" placeholder="Name" required data-form-input>
 
                             <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
                         </div>
-
                         <input type="text" name="subject" class="form-input input-wrapper" placeholder="Subject" required data-form-input>
                         <input type="hidden" name="_subject" value="R-Ramana.Github.io Contact">
-
-
-
                         <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
                         <input type="hidden" name="_template" value="table">
                         <input type="text" name="_honey" style="display:none">
-
                         <button class="form-btn" type="submit" data-form-btn>
-              <i class="lni lni-telegram-original"></i>
-              <span>Get In Touch!</span>
-            </button>
-
+                            <i class="lni lni-telegram-original"></i>
+                            <span>Get In Touch!</span>
+                        </button>
                     </form>
-
                 </section>
-
             </article>
-
         </div>
-
     </main>
 
-
-
-
-
-
-    <!--- custom js link -->
+    <!--- ############################# JS ################################# ---------->
     <script src="./assets/js/script.js"></script>
     <!--- Ion Icon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

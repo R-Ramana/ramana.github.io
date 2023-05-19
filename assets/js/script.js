@@ -73,22 +73,25 @@ sidebarBtn.addEventListener("click", function() { elementToggleFunc(sidebar); })
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
+// ##################################################################### //
+// ######################### TESTIMONIAL MODAL ######################### //
+// ##################################################################### //
+// const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// const modalContainer = document.querySelector("[data-modal-container]");
+// const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+// const overlay = document.querySelector("[data-overlay]");
+// const modalTitle = document.querySelector("[data-modal-title]");
+// const modalSubTitle = document.querySelector("[data-modal-subtitle]");
+// const modalText = document.querySelector("[data-modal-text]");
+// const modalDate = document.querySelector("[data-modal-date]");
 
+// ##################################################################### //
+// ########################### PROJECT MODAL ########################### //
+// ##################################################################### //
 const projectItem = document.querySelectorAll("[data-project-item]");
 const modalContainerProject = document.querySelector("[data-modal-container-project]");
 const modalCloseBtnProject = document.querySelector("[data-modal-close-btn-project]");
 const overlayProject = document.querySelector("[data-overlay-project]");
-
-// modal variable
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalSubTitle = document.querySelector("[data-modal-subtitle]");
-const modalText = document.querySelector("[data-modal-text]");
-const modalDate = document.querySelector("[data-modal-date]");
 
 const projectModalTitle = document.querySelector("[data-modal-project-title]");
 const projectModalSubTitle = document.querySelector("[data-modal-project-category]");
@@ -97,53 +100,51 @@ const projectModalImg = document.querySelector("[data-modal-project-img]");
 
 // modal toggle function
 const modalFunc = function() {
-    modalContainer.classList.toggle("active");
-    overlay.classList.toggle("active");
+        // ############ TESTIMONIAL MODAL ############# //
+        // modalContainer.classList.toggle("active");
+        // overlay.classList.toggle("active");
+        // ############ TESTIMONIAL MODAL ############# //
 
-    modalContainerProject.classList.toggle("active");
-    overlayProject.classList.toggle("active");
-}
+        // ############## PROJECT MODAL ############### //
+        modalContainerProject.classList.toggle("active");
+        overlayProject.classList.toggle("active");
+        // ############## PROJECT MODAL ############### //
+    }
+    // ############ TESTIMONIAL MODAL ############# //
+    // for (let i = 0; i < testimonialsItem.length; i++) {
+    //     testimonialsItem[i].addEventListener("click", function() {
+    //         modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    //         modalSubTitle.innerHTML = this.querySelector("[data-testimonials-subtitle]").innerHTML;
+    //         modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    //         modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
+    //         modalFunc();
+    //     });
+    // }
+    // ############ TESTIMONIAL MODAL ############# //
 
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-    testimonialsItem[i].addEventListener("click", function() {
-
-        modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-        modalSubTitle.innerHTML = this.querySelector("[data-testimonials-subtitle]").innerHTML;
-        modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-        modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
-        modalFunc();
-
-    });
-
-}
-
+// ############## PROJECT MODAL ############### //
 for (let i = 0; i < projectItem.length; i++) {
-
     projectItem[i].addEventListener("click", function() {
-
         projectModalTitle.innerHTML = this.querySelector("[data-project-title]").innerHTML;
         projectModalSubTitle.innerHTML = this.querySelector("[data-project-category]").innerHTML;
         projectModalText.innerHTML = this.querySelector("[data-project-text]").innerHTML;
         projectModalImg.src = this.querySelector("[data-project-img]").src;
         modalFunc();
-
     });
-
 }
 
+// ############ TESTIMONIAL MODAL ############# //
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", modalFunc);
-overlay.addEventListener("click", modalFunc);
+// modalCloseBtn.addEventListener("click", modalFunc);
+// overlay.addEventListener("click", modalFunc);
 
+// ############## PROJECT MODAL ############### //
 modalCloseBtnProject.addEventListener("click", modalFunc);
 overlayProject.addEventListener("click", modalFunc);
 
-
-
 // custom select variables
 const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
+const selectItems = document.querySelectorAll("[data-filter-item-mobile]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
@@ -152,12 +153,10 @@ select.addEventListener("click", function() { elementToggleFunc(this); });
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
     selectItems[i].addEventListener("click", function() {
-
         let selectedValue = this.innerText.toLowerCase();
         selectValue.innerText = this.innerText;
         elementToggleFunc(select);
         filterFunc(selectedValue);
-
     });
 }
 
@@ -165,9 +164,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function(selectedValue) {
-
     for (let i = 0; i < filterItems.length; i++) {
-
         if (selectedValue === "all") {
             filterItems[i].classList.add("active");
         } else if (filterItems[i].dataset.category.includes(selectedValue)) {
@@ -175,18 +172,14 @@ const filterFunc = function(selectedValue) {
         } else {
             filterItems[i].classList.remove("active");
         }
-
     }
-
 }
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
-
     filterBtn[i].addEventListener("click", function() {
-
         let selectedValue = this.innerText.toLowerCase();
         selectValue.innerText = this.innerText;
         filterFunc(selectedValue);
@@ -194,9 +187,7 @@ for (let i = 0; i < filterBtn.length; i++) {
         lastClickedBtn.classList.remove("active");
         this.classList.add("active");
         lastClickedBtn = this;
-
     });
-
 }
 
 
@@ -209,20 +200,16 @@ for (let i = 0; i < filterBtn.length; i++) {
 // // add event to all form input field
 // for (let i = 0; i < formInputs.length; i++) {
 //     formInputs[i].addEventListener("input", function() {
-
 //         // check form validation
 //         if (form.checkValidity()) {
 //             formBtn.removeAttribute("disabled");
 //         } else {
 //             formBtn.setAttribute("disabled", "");
 //         }
-
 //     });
 // }
 
-
-
-// page navigation variables
+// ############## PAGE NAVIGATION ############### //
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 var currentPage = localStorage.getItem('current-page');
@@ -243,11 +230,11 @@ if (id > -1) {
         case "projects":
             currentPage = 2
             break
-        case "articles":
-            currentPage = 3
-            break
+            // case "articles":
+            //     currentPage = 3
+            //     break
         case "contact":
-            currentPage = 4
+            currentPage = 3
             break
         default:
             currentPage = 0
