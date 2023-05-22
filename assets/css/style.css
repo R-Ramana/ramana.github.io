@@ -133,10 +133,6 @@ body {
 body.dark-mode {
     --bg-main: linear-gradient( to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
     --bg-body: linear-gradient( to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-    /* --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
-    --border-gradient-onyx: linear-gradient( to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%)); */
     /* solid */
     --content-bg-1: hsl(0, 0%, 22%);
     --content-bg-2: hsl(240, 1%, 17%);
@@ -145,8 +141,6 @@ body.dark-mode {
     --scrollbar-track: hsl(0, 0%, 7%);
     --alt-text-1: hsl(0, 0%, 100%);
     --alt-text-2: hsl(0, 0%, 98%);
-    /* --border-color: hsl(45, 100%, 72%);
-    --main-accent: hsl(45, 54%, 58%); */
     --main-text: hsl(0, 0%, 84%);
     --sub-text: hsla(0, 0%, 84%, 0.7);
     -webkit-transition: var(--transition);
@@ -296,7 +290,7 @@ article.active {
     border: 0;
     display: flex;
     margin-top: 0;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     font-size: var(--fs-8);
     padding: 1rem 3rem;
@@ -319,93 +313,99 @@ article.active {
 }
 
 input[type="radio"]#color1 {
-    --radio-color: pink;
+    --radio-color: hsl(.99, 48%, 50%);
 }
 
 input[type="radio"]#color2 {
-    --radio-color: blue;
+    --radio-color: hsl(310, 50%, 50%);
 }
 
 input[type="radio"]#color3 {
-    --radio-color: green;
+    --radio-color: hsl(110, 48%, 50%);
 }
 
 input[type="radio"]#color4 {
-    --radio-color: yellow;
+    --radio-color: hsl(200, 48%, 50%);
 }
 
 input[type="radio"]#color5 {
-    --radio-color: silver;
+    --radio-color: hsl(270, 48%, 50%);
+}
+
+input[type="radio"]#color6 {
+    --radio-color: hsl(40, 60%, 60%);
 }
 
 .color1,
 :root:has(#color1:checked) {
     /* gradient */
-    /* --bg-main: hsl(.99, 2%, 96%);
-    --bg-body: hsl(.99, 2%, 88%);
     --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(.99, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
     --bg-gradient-btn-2: linear-gradient( 135deg, hsla(.99, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
     --border-gradient-onyx: linear-gradient( to bottom right, hsl(.99, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%)); */
+    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%));
     /* solid */
-    --border-color: rgb(57, 162, 81);
-    --main-accent: rgb(57, 162, 67);
+    --border-color: hsl(.99, 48%, 50%);
+    --main-accent: hsl(.99, 48%, 50%);
 }
 
 .color2,
 :root:has(#color2:checked) {
     /* gradient */
-    --bg-main: hsl(.99, 2%, 96%);
-    --bg-body: hsl(.99, 2%, 88%);
-    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(.99, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(.99, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
-    --border-gradient-onyx: linear-gradient( to bottom right, hsl(.99, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%));
+    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(310, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(310, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
+    --border-gradient-onyx: linear-gradient( to bottom right, hsl(310, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient( to right, hsl(310, 100%, 18%), hsl(313, 80%, 62%));
     /* solid */
-    --border-color: hsl(.99, 48%, 43%);
-    --main-accent: hsl(.99, 48%, 43%);
+    --border-color: hsl(310, 50%, 50%);
+    --main-accent: hsl(310, 50%, 50%);
 }
 
 .color3,
 :root:has(#color3:checked) {
     /* gradient */
-    --bg-main: hsl(.99, 2%, 96%);
-    --bg-body: hsl(.99, 2%, 88%);
-    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(.99, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(.99, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
-    --border-gradient-onyx: linear-gradient( to bottom right, hsl(.99, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%));
+    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(110, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(110, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
+    --border-gradient-onyx: linear-gradient( to bottom right, hsl(110, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient( to right, hsl(110, 100%, 18%), hsl(113, 80%, 62%));
     /* solid */
-    --border-color: hsl(.99, 48%, 43%);
-    --main-accent: hsl(.99, 48%, 43%);
+    --border-color: hsl(110, 48%, 50%);
+    --main-accent: hsl(110, 48%, 50%);
 }
 
 .color4,
 :root:has(#color4:checked) {
     /* gradient */
-    --bg-main: hsl(.99, 2%, 96%);
-    --bg-body: hsl(.99, 2%, 88%);
-    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(.99, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(.99, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
-    --border-gradient-onyx: linear-gradient( to bottom right, hsl(.99, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%));
+    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(200, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(200, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
+    --border-gradient-onyx: linear-gradient( to bottom right, hsl(200, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient( to right, hsl(200, 100%, 18%), hsl(203, 80%, 62%));
     /* solid */
-    --border-color: hsl(.99, 48%, 43%);
-    --main-accent: hsl(.99, 48%, 43%);
+    --border-color: hsl(200, 48%, 50%);
+    --main-accent: hsl(200, 48%, 50%);
 }
 
 .color5,
 :root:has(#color5:checked) {
     /* gradient */
-    --bg-main: hsl(.99, 2%, 96%);
-    --bg-body: hsl(.99, 2%, 88%);
-    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(.99, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(.99, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
-    --border-gradient-onyx: linear-gradient( to bottom right, hsl(.99, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient( to right, hsl(.99, 100%, 18%), hsl(2, 80%, 62%));
+    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(270, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(270, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
+    --border-gradient-onyx: linear-gradient( to bottom right, hsl(270, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient( to right, hsl(270, 100%, 18%), hsl(273, 80%, 62%));
     /* solid */
-    --border-color: hsl(.99, 48%, 43%);
-    --main-accent: hsl(.99, 48%, 43%);
+    --border-color: hsl(270, 48%, 50%);
+    --main-accent: hsl(270, 48%, 50%);
+}
+
+.color6,
+:root:has(#color6:checked) {
+    /* gradient */
+    --bg-gradient-btn-1: linear-gradient( to bottom right, hsl(40, 58%, 43%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-btn-2: linear-gradient( 135deg, hsla(40, 90%, 41%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 100%);
+    --border-gradient-onyx: linear-gradient( to bottom right, hsl(40, 20%, 75%) 0%, hsla(255, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient( to right, hsl(40, 100%, 18%), hsl(43, 80%, 62%));
+    /* solid */
+    --border-color: hsl(40, 60%, 60%);
+    --main-accent: hsl(40, 60%, 60%);
 }
 
 .visually-hidden {
@@ -583,7 +583,7 @@ main {
 .navbar-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 20px;
     margin: 0 auto;
@@ -636,9 +636,9 @@ main {
 }
 
 .checkbox:checked+.theme_toggle-label .circle-btn {
-    -webkit-transform: translateX(-13px);
-    -ms-transform: translateX(-13px);
-    transform: translateX(-13px);
+    -webkit-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
 }
 
 .theme_toggle-label {
@@ -654,9 +654,9 @@ main {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     border-radius: 50px;
-    height: 15px;
-    width: 30px;
-    margin-top: -10px;
+    height: 18px;
+    width: 35px;
+    margin-top: -12px;
     padding: 5px;
     position: relative;
     -webkit-box-shadow: 1px 1px 5px hsla(var(--hue-color), 100%, 45%, 0.7);
@@ -666,18 +666,18 @@ main {
 }
 
 .theme-toggle {
-    font-size: var(--fs-8);
+    font-size: var(--fs-5);
     color: var(--alt-text-1);
     cursor: pointer;
 }
 
 .circle-btn {
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
     background-color: var(--main-accent);
     position: absolute;
     top: 1.5px;
-    left: 15px;
+    left: 17.5px;
     border-radius: 50%;
     -webkit-transition: -webkit-transform var(--transition);
     transition: -webkit-transform var(--transition);
@@ -1012,7 +1012,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 12px 16px;
     border: 1px solid var(--content-bg-1);

@@ -36,7 +36,7 @@ checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         document.body.classList.remove('dark-mode')
             // quoteIcon.setAttribute("src", "./assets/images/icon-quote-dark.png")
-        console.log(quoteIcon.src);
+            // console.log(quoteIcon.src);
         localStorage.setItem('selected-theme', 'light')
         checkbox.setAttribute("aria-label", "Uncheck to switch to dark theme")
     } else {
