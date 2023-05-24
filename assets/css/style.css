@@ -35,6 +35,8 @@
     --main-accent: hsl(.99, 48%, 43%);
     --main-text: hsl(0, 0%, 16%);
     --sub-text: hsla(0, 0%, 16%, 0.7);
+    --quote-color-start: hsl(.99, 100%, 18%);
+    --quote-color-end: hsl(2, 80%, 62%);
     /**
 * typography
 */
@@ -336,6 +338,14 @@ input[type="radio"]#color6 {
     --radio-color: hsl(35, 60%, 60%);
 }
 
+.quote_gradient_start {
+    stop-color: var(--quote-color-start);
+}
+
+.quote_gradient_end {
+    stop-color: var(--quote-color-end);
+}
+
 .color1,
 :root:has(#color1:checked) {
     /* gradient */
@@ -346,6 +356,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(.99, 48%, 50%);
     --main-accent: hsl(.99, 48%, 50%);
+    --quote-color-start: hsl(.99, 58%, 43%);
+    --quote-color-end: hsl(2, 80%, 62%);
 }
 
 .color2,
@@ -358,6 +370,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(310, 50%, 50%);
     --main-accent: hsl(310, 50%, 50%);
+    --quote-color-start: hsl(310, 58%, 43%);
+    --quote-color-end: hsl(313, 80%, 62%);
 }
 
 .color3,
@@ -370,6 +384,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(110, 48%, 50%);
     --main-accent: hsl(110, 48%, 50%);
+    --quote-color-start: hsl(110, 58%, 43%);
+    --quote-color-end: hsl(113, 80%, 62%);
 }
 
 .color4,
@@ -382,6 +398,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(200, 48%, 50%);
     --main-accent: hsl(200, 48%, 50%);
+    --quote-color-start: hsl(200, 58%, 43%);
+    --quote-color-end: hsl(203, 80%, 62%);
 }
 
 .color5,
@@ -394,6 +412,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(270, 48%, 50%);
     --main-accent: hsl(270, 48%, 50%);
+    --quote-color-start: hsl(270, 58%, 43%);
+    --quote-color-end: hsl(273, 80%, 62%);
 }
 
 .color6,
@@ -406,6 +426,8 @@ input[type="radio"]#color6 {
     /* solid */
     --border-color: hsl(35, 60%, 60%);
     --main-accent: hsl(35, 60%, 60%);
+    --quote-color-start: hsl(35, 58%, 43%);
+    --quote-color-end: hsl(38, 80%, 62%);
 }
 
 .visually-hidden {
@@ -1269,7 +1291,7 @@ PROJECT MODAL
     opacity: 1;
 }
 
-.modal-img-wrapper>img {
+.modal-img-wrapper>svg {
     display: none;
 }
 
@@ -1682,7 +1704,7 @@ textarea.form-input::-webkit-resizer {
         flex-direction: column;
         align-items: center;
     }
-    .modal-img-wrapper>img {
+    .modal-img-wrapper>svg {
         display: block;
         flex-grow: 1;
         width: 35px;
