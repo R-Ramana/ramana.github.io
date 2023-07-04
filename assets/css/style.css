@@ -1003,10 +1003,6 @@ main {
     font-size: var(--fs-1);
 }
 
-.expertise-content-box {
-    text-align: center;
-}
-
 .expertise-item-title {
     margin-bottom: 7px;
 }
@@ -1015,7 +1011,15 @@ main {
     color: var(--main-text);
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
-    line-height: 1.6;
+    line-height: 1.9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expertise-item-text i {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    text-align: center;
 }
 
 
@@ -1667,6 +1671,7 @@ textarea.form-input::-webkit-resizer {
     }
     .expertise-content-box {
         text-align: left;
+        width: 100%;
     }
     .testimonials-title {
         margin-bottom: 25px;
