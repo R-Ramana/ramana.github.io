@@ -99,6 +99,10 @@ span {
     display: block;
 }
 
+strong {
+    font-size: var(--fs-4);
+}
+
 button {
     font: inherit;
     background: none;
@@ -1020,6 +1024,27 @@ main {
     font-size: var(--fs-4);
     font-weight: var(--fw-600);
     text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .expertise-item:hover {
+        animation: subtle-float 5s infinite alternate ease-in-out;
+    }
+    .form-btn {
+        animation: subtle-float 3.5s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes subtle-float {
+    50% {
+        translate: 0 -.25em;
+        scale: 1.0125;
+        /* box-shadow: 0 .01rem .03rem var(--content-bg-4); */
+    }
+    100% {
+        translate: 0;
+        scale: 1;
+    }
 }
 
 
