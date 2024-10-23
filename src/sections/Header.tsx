@@ -47,8 +47,8 @@ export const Header = () => {
     <div className="flex justify-center items-center fixed top-5 w-full z-50">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <a href="#home" className={`nav-item ${activeSection == 'home' && "nav-active"}`}>Home</a>
-        <a href="#projects" className={`nav-item ${activeSection == 'projects' && "nav-active"}`}>Projects</a>
         <a href="#about" className={`nav-item ${activeSection == 'about' && "nav-active"}`}>About</a>
+        <a href="#projects" className={`nav-item ${activeSection == 'projects' && "nav-active"}`}>Projects</a>
         <a href="mailto:ramanalfc@yahoo.com.sg?subject=Let's%20Connect!" className="nav-item bg-white text-gray-900">Contact</a>
       </nav>
     </div>
