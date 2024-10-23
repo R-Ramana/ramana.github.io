@@ -49,7 +49,7 @@ export const Header = () => {
         <a href="#home" className={`nav-item ${activeSection == 'home' && "nav-active"}`}>Home</a>
         <a href="#about" className={`nav-item ${activeSection == 'about' && "nav-active"}`}>About</a>
         <a href="#projects" className={`nav-item ${activeSection == 'projects' && "nav-active"}`}>Projects</a>
-        <a href="mailto:ramanalfc@yahoo.com.sg?subject=Let's%20Connect!" className="nav-item bg-white text-gray-900">Contact</a>
+        <a href="mailto:ramanalfc%40yahoo.com.sg?subject=Let%27s%20Connect!" className="nav-item bg-white text-gray-900">Contact</a>
       </nav>
     </div>
   );
