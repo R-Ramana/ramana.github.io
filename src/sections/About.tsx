@@ -29,83 +29,83 @@ import { TechStackItems } from "@/components/TechStackItems";
 const techStack = [
   {
     title: 'Java',
-    img: Java
+    img: Java,
   },
   {
     title: 'Spring',
-    img: Spring
+    img: Spring,
   },
   {
     title: 'SQL',
-    img: SQL
+    img: SQL, 
   },
   {
     title: 'Python',
-    img: Python
+    img: Python,
   },
   {
     title: 'Flask',
-    img: Flask
+    img: Flask,
   },
   {
     title: 'Pandas',
-    img: Pandas
+    img: Pandas,
   },
   {
     title: 'Tensorflow',
-    img: Tensorflow
+    img: Tensorflow,
   },
   {
     title: 'C/C++',
-    img: C
+    img: C,
   },
   {
     title: 'Tableau',
-    img: Tableau
+    img: Tableau,
   },
   {
     title: 'JavaScript',
-    img: JS
+    img: JS,
   },
   {
     title: 'React',
-    img: ReactIcon
+    img: ReactIcon,
   },
   {
     title: 'CSS3',
-    img: CSS
+    img: CSS,
   },
   {
     title: 'HTML5',
-    img: HTML
+    img: HTML,
   },
   {
     title: 'Arduino',
-    img: Arduino
+    img: Arduino,
   },
   {
     title: 'Raspberry Pi',
-    img: Pi
+    img: Pi,
   },
   {
     title: 'Git',
-    img: Git
+    img: Git,
   },
   {
     title: 'Figma',
-    img: Figma
+    img: Figma,
   },
   {
     title: 'Adobe XD',
-    img: AdobeXD
+    img: AdobeXD,
   },
   {
     title: 'WordPress',
-    img: Wordpress
+    img: Wordpress,
   },
   {
     title: 'Verilog',
-    img: Verilog
+    img: Verilog,
   },
   // {
   //   title: 'ContikiOS',
@@ -121,7 +121,7 @@ export const About = () => {
   return (
     <section className="pt-20 pb-16 lg:py-24" id="about">
       <div className="container">
-        <SectionHeader title="About Me" description="View some of the articles I have written or the tech stack I have expierience with."/>
+        <SectionHeader title="About Me" description="View some of the articles I have written or the tech stack I have experience with."/>
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1 hover:-rotate-3 transition duration-300 cursor-pointer">
@@ -129,13 +129,13 @@ export const About = () => {
                 <CardHeader title="My Blog" description="Explore the articles I have written over the years!" className="px-6 pt-6 pb-2 md:pt-8 md:pb-6 lg:pb-5"/>
                 <div className="relative w-[250px] md:w-[200px] mx-auto">
                   <Image src={techTeam} alt="book cover"/>
-                  <Image src={techTeam} alt="book cover" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pinging opacity-25"/>
+                  <Image src={techTeam} alt="book cover" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pinging dark:opacity-25 opacity-75"/>
                 </div>
               </a>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader title="My Tech Stack" description="The technologies in my arsenal!" className="p-6 md:py-8"/>            
-              <TechStackItems techStack={techStack} innerClassName="animate-move-left [animation-duration:24s]" />
+              <TechStackItems techStack={techStack} innerClassName="animate-move-left [animation-duration:24s]"/>
               <TechStackItems techStack={techStack} className="mt-6" innerClassName="-translate-x-[50%] animate-move-right [animation-duration:24s]" />
             </Card>
           </div>

@@ -96,7 +96,7 @@ export const Projects = () => {
         <SectionHeader title="Featured Projects" description="Some projects that I have worked on outside of my work." />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, projectIndex) => (
-            <Card key={project.title} className="px-8 pt-8 pb-0 md:pt-10 md:px-10 lg:pt-12 lg:px-20 sticky" 
+            <Card key={project.title} className="z-20 px-8 pt-8 pb-0 md:pt-10 md:px-10 lg:pt-12 lg:px-20 sticky" 
             style={{
               top: `calc(70px + ${projectIndex * 60}px)`
             }}>
@@ -105,7 +105,7 @@ export const Projects = () => {
                   <div className="flex items-center">
                       <div className="flex items-center">
                         {project.iconList.map((icon,index) => (
-                          <div className="outline outline-2 outline-gray-900/20 rounded-full size-9 lg:size-10 md:-mt-3 lg:-mt-0 p-[7px] bg-gray-700"
+                          <div key={index} className="outline outline-2 dark:outline-gray-900/20 outline-gray-300/40 rounded-full size-9 lg:size-10 md:-mt-3 lg:-mt-0 p-[7px] dark:bg-gray-700 bg-gray-200"
                           style={{
                             transform: `translateX(-${12 * index}px)`}}>
                             <span>{icon.logo}</span>
@@ -122,7 +122,7 @@ export const Projects = () => {
                   <hr className="border-t-2 border-white/5 mt-4 lg:mt-5" />
                   <ul className="flex flex-col gap-2 mt-4 md:mt-5">
                     {project.desc.map(descr => (
-                      <li className="flex gap-2 items-center text-sm lg:text-base text-white/60">
+                      <li key={descr.info} className="flex gap-2 items-center text-sm lg:text-base dark:text-white/60 text-gray-800/60">
                         <CheckIcon className="size-4 shrink-0 md:size-5" />
                         <span>{descr.info}</span>
                       </li>
@@ -144,17 +144,6 @@ export const Projects = () => {
                   </div>
                 </div>
                 <div className="relative">
-                  {/* <div className="flex items-center justify-between absolute mt-6 ml-4">
-                    <div className="flex items-center">
-                      {project.iconList.map((icon,index) => (
-                        <div className="outline outline-2 outline-gray-800/10 rounded-full size-10 p-[7px] bg-gray-200" 
-                        style={{
-                          transform: `translateX(-${12 * index}px)`}}>
-                          <span>{icon.logo}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div> */}
                   <a href={project.other_link} target="_blank">
                       <Image src={project.image} alt={project.title} className="rounded-t-2xl mt-6 -mb-4 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" />
                   </a>

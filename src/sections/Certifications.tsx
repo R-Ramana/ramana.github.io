@@ -51,9 +51,9 @@ export const Certifications = () => {
             {[...new Array(2)].fill(0).map((_, idx) => (
               <Fragment key={idx}>
                 {certifications.map(certification => (
-                  <Card key={certification.name} className="group max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 transition duration-300  cursor-pointer hover:bg-gray-800/40">
+                  <Card key={certification.name} className="group max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 cursor-pointer dark:hover:bg-gray-800/40 hover:bg-white/40 transition duration-300">
                     <a href={certification.link} target="_blank">
-                      <div className="flex flex-col text-white/30 group-hover:bg-gradient-to-r group-hover:from-[#9796f0] group-hover:to-[#fbc7d4] group-hover:text-transparent group-hover:bg-clip-text transition duration-500">
+                      <div className="flex flex-col dark:text-white/30 text-gray-800 group-hover:bg-gradient-to-r group-hover:from-[#9796f0] group-hover:to-[#9796f0] dark:group-hover:to-[#fbc7d4] group-hover:text-transparent group-hover:bg-clip-text">
                         <div className="grow-0">
                           <Image src={certification.img} alt={certification.name} className="h-[100px] md:h-[200px] w-auto mx-auto" />
                         </div>

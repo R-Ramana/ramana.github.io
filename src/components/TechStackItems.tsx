@@ -18,9 +18,9 @@ export const TechStackItems = ({techStack, className, innerClassName}:
             {[...new Array(2)].fill(0).map((_, idx) => (
               <Fragment key={idx}>
                 {techStack.map(item => (
-                    <div key={item.title} className="inline-flex items-center font-semibold gap-2 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
+                    <div key={item.title} className="text-gray-100 dark:text-gray-800 inline-flex items-center font-semibold gap-2 py-2 px-3 outline outline-2 dark:outline-white/10 outline-gray-800/10 rounded-lg">
                         <TechStackIcon component={item.img} />
-                        <span>{item.title}</span>
+                        <span className="dark:text-white text-gray-800">{item.title}</span>
                     </div>
                 ))}
               </Fragment>

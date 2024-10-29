@@ -45,11 +45,11 @@ export const Header = () => {
 
   return ( 
     <div className="flex justify-center items-center fixed top-5 w-full z-50">
-      <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
+      <nav className="flex gap-1 p-0.5 border dark:border-white/15 border-gray-800/15 rounded-full dark:bg-white/10 bg-gray-100/70 backdrop-blur">
         <a href="#home" className={`nav-item ${activeSection == 'home' && "nav-active"}`}>Home</a>
         <a href="#about" className={`nav-item ${activeSection == 'about' && "nav-active"}`}>About</a>
         <a href="#projects" className={`nav-item ${activeSection == 'projects' && "nav-active"}`}>Projects</a>
-        <a href="mailto:ramanalfc%40yahoo.com.sg?subject=Let%27s%20Connect!" className="nav-item bg-white text-gray-900">Contact</a>
+        <a href="mailto:ramanalfc%40yahoo.com.sg?subject=Let%27s%20Connect!" className="nav-item dark:from-white dark:to-white bg-gradient-to-r from-[#9796f0] to-[#fbc7d4] dark:text-gray-900 text-white">Contact</a>
       </nav>
     </div>
   );
